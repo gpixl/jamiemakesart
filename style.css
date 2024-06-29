@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 
+
 @font-face {
   font-family: 'myFont';
   src: url('https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/Gibberesque.ttf?v=1649363228324');
@@ -110,6 +111,7 @@ h2 {
 h1 {
   color: white;
   font-family: 'myFont', sans-serif;
+  font-weight: 400;
   font-size: 50px;
 }
 
@@ -192,7 +194,6 @@ aboutme {
   border-radius: 5px;
   padding: 5%;
   background-color: #0a0f1f;
-  display: none;
   text-align: left;
   transition: outline 0.03s;
   margin: 0.3%;
@@ -200,10 +201,6 @@ aboutme {
 
 .clickablelinks {
     line-height: 40px;
-}
-
-aboutme:hover {
-    outline: 2px #505d75 solid;
 }
 
 br {
@@ -241,9 +238,9 @@ boxtitle {
   color: white;
   margin: 0.0em;
   display: inline-block;
-  font-weight: bold;
   font-size: 35px;
   transition: transform 0.3s, outline 0.05s;
+  padding: 5px;
 }
 
 boxdesc {
@@ -305,19 +302,22 @@ boxdesc {
 
 .box {
   
-  border-radius: 3px;
+  
+  border-radius: 7px;
   padding: 25px;
   text-decoration: none;
-  margin: 1.5em;
+  margin: 1em;
   text-align: center;
-  width: 225px;
-  height: 225px;
+  width: 180px;
+  height: 180px;
   display: block;
   
   
   outline: 0px white solid;
-  transition: transform 0.3s, outline 0.05s, box-shadow 0.3s;
+  transition: transform 0.2s, outline 0.05s, box-shadow 0.2s;
   box-shadow: black;
+  
+  
 }
 
 .musicbox {
@@ -408,7 +408,7 @@ thoughtboxes {
 
 boxes {
   perspective: 300px;
-  width: 70%;
+  width: 50%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -433,7 +433,6 @@ boxes {
 .box:hover {
   transform: translate(0px, -5px) rotate3d(1, 0, 0.3, 1deg);
   outline: 2px white solid;
-  box-shadow: 10px 10px 0px 0px #5d6eb0;
 }
 
 .link {
