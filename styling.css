@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+body {
+  margin: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #574361;
+  color: white;
+  font-family: 'Redressed', Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  font-size: 25px;
+  padding: 5%;
+  border-radius: 15px;
+  box-shadow: 0px 8px 5px 2px #366B82;
+}
+
+html {
+  background-image: url("https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/Stories2.png?v=1700370957576");
+  background-color: #7DC6B3;
+  background-attachment: fixed;
+}
+
+h2 {
+  transform: rotate(2deg);
+  text-shadow: 5px 5px 5px #2e2459;
+  font-size: 40px;
+}
+
+h2:before {
+  color: gray;
+  content:"#";
+}
+
+span {
+  filter: brightness(150%) opacity(80%);
+  cursor: help;
+  border-radius: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+span:hover {
+  filter: opacity(100%) invert(100%);
+  background-color: white;
+}
+
+div {
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 40%;
+  text-align: center;
+  font-size: 20px;
+  background-color: #A68787;
+  filter: invert(100%);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px #EFF1C4;
+}
+
+@media all and (max-width:800px) {
+
+  body {
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+  }
+
+}

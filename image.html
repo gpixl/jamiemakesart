@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/GpixlDrawnIcon.png?v=1653411775807" />
+    <title>Image Viewer</title>
+    <link rel="stylesheet" href="/viewer.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    
+    <img id="replaceable" onclick="upscale()" style="height: 80%; cursor:zoom-in;" onload="res()">
+    <p id="resolution" style="opacity: 30%; margin:0; font-size: 10px;">
+    </p>
+    <p id="altp">
+      hi
+    </p>
+    
+  </body>
+</html>
+
+<script>
+  
+  
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+document.getElementById("replaceable").src = urlParams.get('img');
+document.getElementById("altp").innerText = urlParams.get('alt');
+  
+document.title = urlParams.get('alt');
+  
+var actWidth = replaceable.clientWidth;
+var actHeight = replaceable.clientHeight;
+console.log(actWidth);
+
+  
+if (actHeight > replaceable.naturalHeight) {
+  document.getElementById('replaceable').style.cssText = 'height: 80%; cursor:zoom-out;';
+}
+  
+function upscale() {
+  
+  
+  if (actHeight < replaceable.naturalHeight) {
+  if (document.getElementById('replaceable').style.height == 'auto') {
+    document.getElementById('replaceable').style.cssText = 'height: 80%; cursor:zoom-in;';
+  } else {
+    document.getElementById('replaceable').style.cssText = 'height: auto; cursor:zoom-out;';
+  }
+  } else {
+  if (document.getElementById('replaceable').style.height == 'auto') {
+    document.getElementById('replaceable').style.cssText = 'height: 80%; cursor:zoom-out;';
+    res();
+  } else {
+    document.getElementById('replaceable').style.cssText = 'height: auto; cursor:zoom-in;';
+    res();
+  }}
+
+
+}
+  
+function res() {
+var actWidth = replaceable.clientWidth;
+var actHeight = replaceable.clientHeight;
+var width = replaceable.naturalWidth;
+var height = replaceable.naturalHeight;
+document.getElementById("resolution").innerText = width + "x" + height;
+if (actHeight > replaceable.naturalHeight) {
+  document.getElementById("resolution").innerText = width + "x" + height + " (Upscaled)";
+}
+}
+
+</script>

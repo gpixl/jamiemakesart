@@ -1,0 +1,529 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+@font-face {
+  font-family: 'myFont';
+  src: url('https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/Gibberesque.ttf?v=1649363228324');
+}
+
+@font-face {
+  font-family: 'defaultFont';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+}
+
+.hideatstart {
+  display: none;
+}
+
+.normalbio {
+  padding: 25px;
+  background-color: #2a1e3b;
+  border-radius: 5px;
+}
+
+.password {
+  background-color: #17161a;
+  padding: 1%;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  font-family: 'Anonymous Pro', monospace;
+  transition: background-color 0.1s;
+}
+
+.fill {
+  position: inline;
+  border: none;
+  width: 79%;
+}
+
+.passwordsubmitter {
+  background-color: #17161a;
+  padding: 1%;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  font-family: 'Anonymous Pro', monospace;
+  color: grey;
+}
+
+.passwordsubmitter:active {
+  background-color: black;
+  transform: translateY(3px);
+}
+
+.password:hover {
+  outline: 2px solid #57505c;
+}
+
+.password:focus {
+  background-color: #393040;
+}
+
+.thought {
+  font-size: 17px;
+  background: black;
+  border-radius: 3px;
+  width: 500px;
+  padding: 3%;
+  margin: 2%;
+  color: #969696;
+  transition: transform 0.3s, outline 0.05s, filter 0.3s, background-color 0.3s, line-height 0.3s;
+}
+
+.thought:hover {
+  background: #070708;
+  filter: blur(0px);
+  outline: 2px solid #252429;
+}
+
+.thoughtheader {
+  font-family: 'Anonymous Pro', monospace;
+  color: #bfac95;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.thoughttitle {
+  font-family: 'Anonymous Pro', monospace;
+  color: #bfac95;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.thoughttitle:hover {
+  color: white;
+}
+
+
+h2 {
+  font-size: 20px;
+  color: #eacceb;
+  font-weight: normal;
+}
+
+h1 {
+  color: white;
+  font-family: 'myFont', sans-serif;
+  font-size: 50px;
+}
+
+p {
+  font-size: 17px;
+  white-space: pre-line;
+}
+
+body {
+  color: #9e9fba;
+  background-color: #060914;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.0em;
+  text-align: center;
+}
+smalltext {
+  font-size: 13px;
+}
+
+b {
+  color: white;
+}
+
+.invisiblelink {
+  text-decoration: underline;
+  color: #9e9fba;
+}
+
+.invisiblelink:hover {
+  color: white;
+}
+
+.extralink {
+  text-decoration: none;
+  color: #6cbab8;
+}
+
+.extralink:hover {
+  color: white;
+}
+
+.commlink {
+  text-decoration: none;
+  color: #eacceb;
+}
+
+.commlink:hover {
+  color: white;
+}
+
+.clink {
+  text-decoration: none;
+  color: white;
+  filter: opacity(80%);
+}
+
+.clink:hover {
+  filter: opacity(100%);
+}
+
+.commsection {
+  display: block;
+  border-radius: 5px;
+  padding: 2.5%;
+  background-color: #252230;
+  transition: outline 0.03s;
+}
+
+.commsection:hover {
+  outline: 2px solid #414457;
+}
+.comms {
+  background-color: #060914;
+  border-radius: 5px;
+  padding: 5%;
+  background-color: #1c1721;
+}
+
+aboutme {
+  border-radius: 5px;
+  padding: 5%;
+  background-color: #0a0f1f;
+  display: none;
+  text-align: left;
+  transition: outline 0.03s;
+  margin: 0.3%;
+}
+
+.clickablelinks {
+    line-height: 40px;
+}
+
+aboutme:hover {
+    outline: 2px #505d75 solid;
+}
+
+br {
+   content: " ";
+   display: block;
+   margin: 25px 0;
+}
+
+lbr {
+   content: " ";
+   display: block;
+   margin: 15px 0;
+}
+llbr {
+   content: " ";
+   display: block;
+   font-size: 0px;
+   margin: 0px 0;
+}
+
+lbbr {
+   content: " ";
+   display: block;
+   margin: 50px 0;
+}
+
+bbr {
+   content: " ";
+   display: block;
+   margin: 100px 0;
+}
+
+boxtitle {
+  font-family: 'myFont', sans-serif;
+  color: white;
+  margin: 0.0em;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 35px;
+  transition: transform 0.3s, outline 0.05s;
+}
+
+boxdesc {
+  color: white;
+}
+
+.linkheader {
+  font-family: 'myFont', sans-serif;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 35px;
+  transition: transform 0.3s, outline 0.05s;
+}
+
+
+.discordlink {
+  line-height: 40px;
+  border-radius: 3px;
+  background-color: #11162b;
+  padding: 10px;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+  text-align: left;
+  transition: transform 0.1s;
+  background-color: #484763;
+  padding: 10px;
+  transition: color 0.03s, background-color 0.05s, filter 0.05s;
+}
+
+.links:hover {
+  filter: brightness(120%);
+}
+
+.hidden {
+  
+  padding: 25px;
+  text-decoration: none;
+  margin: 1.5em;
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  display: block;
+  
+  
+  outline: 0px white solid;
+  transition: transform 0.3s, outline 0.05s, box-shadow 0.3s;
+}
+
+
+.aboutMe {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.box {
+  
+  border-radius: 3px;
+  padding: 25px;
+  text-decoration: none;
+  margin: 1.5em;
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  display: block;
+  
+  
+  outline: 0px white solid;
+  transition: transform 0.3s, outline 0.05s, box-shadow 0.3s;
+  box-shadow: black;
+}
+
+.musicbox {
+  
+  border-radius: 5px;
+  padding: 25px;
+  text-decoration: none;
+  margin: 1.5em;
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  display: block;
+  
+  
+  outline: 0px white solid;
+  transition: transform 0.3s, outline 0.03s, box-shadow 1s;
+}
+
+
+.charbox {
+  box-shadow: 0px 5px 0px 5px black;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #282233;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  padding: 3%;
+}
+
+likes {
+  font-weight: bold;
+}
+
+.art {
+  float: center;
+  filter: opacity(90%);
+  border-radius: 6px;
+  margin: 1%;
+  object-fit: scale-down;
+  height: 350px;
+  width: auto;
+  transition: filter 0.1s, outline 0.05s, box-shadow 0.3s;
+}
+
+.art:hover {
+  cursor: pointer;
+  outline: 2px white solid;
+  filter: opacity(100%);
+}
+
+
+.stuffilike {
+  padding: 5em;
+  text-align: left;
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+
+liked {
+  float:left;
+}
+
+.store {
+  position: absolute;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #4e4d63;
+}
+
+.store:hover {
+  color: #826c91;
+}
+
+
+thoughtboxes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  flex-basis: 50%;
+  box-shadow: 0px 0px 0px white;
+}
+
+boxes {
+  perspective: 300px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  flex-basis: 50%;
+  box-shadow: 0px 0px 0px black;
+}
+
+.hidden:hover {
+  transform: translate(0px, -5px) rotate(0.4deg);
+  outline: 2px white solid;
+  box-shadow: 0px 5px 25px black;
+}
+
+.musicbox:hover {
+  transform: translate(0px, -5px) rotate(-0.4deg);
+  outline: 2px white solid;
+  box-shadow: 0px 15px 25px -10px white;
+}
+
+.box:hover {
+  transform: translate(0px, -5px) rotate3d(1, 0, 0.3, 1deg);
+  outline: 2px white solid;
+  box-shadow: 10px 10px 0px 0px #5d6eb0;
+}
+
+.link {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  display: block;
+}
+
+.money {
+  color: #8cc2a5;
+  font-weight: bold;
+}
+
+.bandcamp {
+  width: 100%;
+  height: 300px;
+}
+
+@media all and (min-width:1000px) {
+  .commsection {
+    width: 40%;
+  }
+  
+  .commshowcase {
+  width: 30%;
+  height: auto;
+  position: absolute;
+  float: left;
+  right: 10%;
+}
+  
+  mobile {
+    visibility: hidden;
+  }
+
+}
+
+
+@media all and (max-width:1000px) {
+  .commshowcase {
+  width: 100%;
+  height: auto;
+}
+  
+  mobile {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+  
+  boxes {
+    width: 100%;
+  }
+  
+  .charbox {
+  text-align: center;
+  box-shadow: none;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  padding-top: 5%;
+}
+  
+  .charbox > p {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .charbox > h1 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .fill {
+    width: 100%;
+  }
+  
+  .art {
+    width: 350px;
+  }
+  
+  .thought {
+    width: 80%;
+  background: #070708;
+  filter: blur(0px);
+  }
+  
+
+}

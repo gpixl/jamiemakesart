@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta content="Music I made!" name="description" />
+    <meta content="Music I made!" name="og:description" />
+    <meta content="Music" property="og:title" />
+    <meta property="og:image" content="https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/Music2.png?v=1699113183428">    
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/GpixlDrawnIcon.png?v=1653411775807" />
+    <title>Music page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body style="background-image: none; background-color: #080a17; background-image: url('https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/Starfield.png?v=1699112967680'); text-align: left; margin: 5%;">
+    
+    
+    <div class="clickablelinks" style="padding: 2em; text-align: center;">
+    <a class="links" href="/">Back</a>
+    </div>
+    <boxes style="width: 100%;">
+
+      
+    <!--<a class="box" href="commissions" style="background: url(https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/commishesbg.png?v=1690000278830); background-size: cover; background-position: center;">
+      <boxtitle>Commission me</boxtitle><br>
+      <boxdesc>A page with details concerning commissions!</boxdesc>
+    </a>  -->
+    
+    <a class="box" href="https://greenpixel.bandcamp.com/" style="background: url(https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/Bandcamp.png?v=1699213460994); background-size: cover; background-position: right;">
+      <boxtitle>Bandcamp</boxtitle><br>
+      <boxdesc>Where most of my original music is</boxdesc>
+    </a>
+      
+    
+    <a class="box" href="https://www.youtube.com/@Greenpixel16/videos" style="background: url(https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/ytcover.png?v=1699213607078); background-size: cover; background-position: right;">
+      <boxtitle>Youtube</boxtitle><br>
+      <boxdesc>Remixes, video playlists, and extra stuff</boxdesc>
+    </a>
+    
+    <a class="box" id="cmClick" style="background: url(https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/CMSOTW.png?v=1699112409526); background-size: cover; background-position: center; cursor:pointer;">
+      <boxtitle>Chasing Myself Out The Window</boxtitle><br>
+      <boxdesc>Listen to it on spotify, youtube music, or apple music!</boxdesc>
+    </a>
+      
+    <aboutme id="cmotw" style="background-color: #171542">
+    <boxtitle>
+    Listen on:
+    </boxtitle><br>
+    <div class="clickablelinks">
+      
+    <a class="links" style="background-color: #9c4538;" href="https://music.youtube.com/playlist?list=PLKRV0V1qwj4zAgvCn2LJv6VtiJK-kc2K5">Youtube Music</a>
+    <a class="links" style="background-color: #2c9453;" href="https://open.spotify.com/album/3ttHx2brQLRJirdkEgCBIy">Spotify</a>
+    <a class="links" style="background-color: #bd338a;" href="https://music.apple.com/us/album/chasing-myself-out-the-window/1713894868">Apple Music</a>
+    </div>
+    </aboutme>
+      
+    <a class="box" id="hlClick" style="background: url(https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/hlaot2.png?v=1705781338242); background-size: cover; background-position: center; cursor:pointer;">
+      <boxtitle>Hazy Lines and Other Things</boxtitle><br>
+      <boxdesc>Listen to it on spotify, youtube music, or apple music!</boxdesc>
+    </a>
+      
+    <!--<a class="box" href="https://ldjam.com/events/ludum-dare/51/the-crumbly-fumbly" style="background: url(https://cdn.glitch.global/2832645e-8ecb-4c1c-87b7-ba31e67d043a/CrumbleBG.png?v=1664845689293); background-size: cover; background-position: center;">
+      <boxtitle>The Crumbly Fumbly</boxtitle><br>
+      <boxdesc>Ludum Dare 51 submission - I made most of the graphics and music!</boxdesc>
+    </a>-->
+      
+    <aboutme id="hlaot" style="background-color: #513b6b">
+    <boxtitle>
+    Listen on:
+    </boxtitle><br>
+    <div class="clickablelinks">
+      
+    <a class="links" style="background-color: #9c4538;" href="https://music.youtube.com/browse/MPREb_Y7ICoicQtyD">Youtube Music</a>
+    <a class="links" style="background-color: #2c9453;" href="https://open.spotify.com/album/7AJCdrR3jpfXpMRFduXvsM">Spotify</a>
+    <a class="links" style="background-color: #bd338a;" href="https://music.apple.com/us/album/hazy-lines-and-other-things/1725953569">Apple Music</a>
+    </div>
+    </aboutme>
+    </boxes>
+    
+  </body>
+</html>
+
+<script>
+document.getElementById("cmClick").addEventListener("click", cm);
+document.getElementById("hlClick").addEventListener("click", hl);
+  
+function cm() {
+  document.getElementById("cmClick").style.display = "none";
+  document.getElementById("cmotw").style.display = "inline";
+}
+
+  
+function hl() {
+  document.getElementById("hlClick").style.display = "none";
+  document.getElementById("hlaot").style.display = "inline";
+}
+</script>
