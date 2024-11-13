@@ -46,6 +46,43 @@ h1 {
   justify-content: center;
 }
 
+
+.copyable {
+  
+
+  
+  color: white;
+  text-decoration: none;
+  background: #5364b5;
+  padding: 8px;
+  font-size: 80%;
+  margin-bottom: 5px;
+  
+  display: inline-block;
+}
+
+.copyable:hover {
+  outline: 1px solid white;
+  cursor: copy;
+}
+
+.copied {
+  color: white;
+  text-decoration: none;
+  background: #5364b5;
+  padding: 8px;
+  font-size: 80%;
+  margin-bottom: 5px;
+  
+  display: inline-block;
+}
+
+.copied:hover {
+  cursor: copy;
+}
+
+
+
 .link {
   
 
@@ -63,8 +100,15 @@ h1 {
 
 .link:hover {
   cursor: pointer;
-  filter: brightness(110%);
   outline: 1px solid white;
+}
+
+
+.contrib {
+  background-color: #141142;
+  padding: 1em;
+  border-radius: 5px;
+  margin: 1em;
 }
 
 
