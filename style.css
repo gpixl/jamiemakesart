@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'header';
-  src: url('https://cdn.glitch.global/bd293175-619c-40b5-82fd-e66ca60679e1/Gibberesque.ttf?v=1729658184300');
+  src: url('assets/Gibberesque.ttf');
 }
 
 body {
   background: #1c1959;
-  background-image: url("https://cdn.glitch.global/bd293175-619c-40b5-82fd-e66ca60679e1/starfield.png?v=1729660179724");
+  background-image: url("assets/starfield.png");
   color: white;
   float: center;
   font-family: sans-serif;
