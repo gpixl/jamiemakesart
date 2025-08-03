@@ -46,6 +46,10 @@ h1 {
   justify-content: center;
 }
 
+.sub {
+  font-size: 80%;
+  opacity: 50%;
+}
 
 .copyable {
   
