@@ -38,19 +38,45 @@
 <script src="script.js"></script> 
 
 <style>
+
+
+  .image-wrap {
+    display: inline-block;
+    position: relative;
+    width: 128px;
+    height: 128px;
+    margin: 3px;
+    border-radius: 1px;
+  }
+
+  .image-wrap:hover > img {
+    filter:opacity(30%);
+    cursor: pointer;
+  }
+
+  .image-wrap:hover > .image-text {
+    display: block;
+  }
+
+  .image-text {
+    text-align: center;
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    top: 0px;
+    font-size: 80%;
+    width: 128px;
+    height: 128px;
+  }
+
   body {
     padding: 4em;
   }
 
   .img {
-    margin-bottom: 1%;
     border-radius: 1px;
   }
   
-  .img:hover {
-    filter:brightness(120%);
-    cursor: pointer;
-  }
 
   @media all and (max-width:500px) {
   

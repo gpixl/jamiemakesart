@@ -15,7 +15,7 @@ for i in allworks:
         if len(worktags[0]) > 1:
             readimg = Image.open("assets/" + worktags[0])
             dimensions = str(readimg.width) + 'x' + str(readimg.height)
-            htmlstring = '<img\nlink="' + worktags[1] + '"\ndisplay="assets/' + worktags[0] + '"\nalt="' + worktags[2] + '"\ndimensions="' + dimensions + '">\n'
+            htmlstring = '<div class="image-wrap"><img\nlink="' + worktags[1] + '"\ndisplay="assets/' + worktags[0] + '"\nalt="' + worktags[2] + '"\ndimensions="' + dimensions + '">\n<p class="image-text">' + worktags[2] + '<br><br>(Click to view)</p></div>'
             allhtml = allhtml + htmlstring
 
 site = open("index copy.html").read()
