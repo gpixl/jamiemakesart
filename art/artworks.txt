@@ -101,3 +101,7 @@ Fanart of Alta and Zenith from the game Wanderstop
 ;;AppleBirdReference.png
 https://bsky.app/profile/jamiemakes.art/post/3m6svdnew322s
 Reference of my sona Apple Bird
+
+;;yayitsmeapplebirdwohoo.gif
+https://bsky.app/profile/did:plc:n27mx775abqfpnxugztgyhep/post/3maoubjug3c2e
+Drawing of my sona Apple Bird
