@@ -7,6 +7,11 @@
 }
 
 
+code {
+  background-color: #090824;
+  display: block;
+  padding: 2px;
+}
 
 body {
   background: #1c1959;
