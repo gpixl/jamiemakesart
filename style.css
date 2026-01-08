@@ -6,6 +6,24 @@
   src: url('assets/Gibberesque.ttf');
 }
 
+
+.input {
+  font-family: sans-serif;
+  font-size: 13px;
+}
+
+.date {
+  filter: opacity(0.4);
+  font-size: 80%;
+}
+
+.question {
+  display: block;
+  transform: translate(-10px, 0px);
+  filter: opacity(0.7)
+}
+
+
 body {
   background: #1c1959;
   background-image: url("assets/starfield.png");
@@ -25,7 +43,7 @@ h1 {
 
 
 .box {
-  background: #1c1959;
+  background-color: #1c1959;
   border-radius: 5px;
   max-width: 400px;
   display: block;

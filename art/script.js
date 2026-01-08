@@ -68,6 +68,7 @@ document.getElementById("show").style.display = "";
   var width = imageToSet.naturalWidth;
   var height = imageToSet.naturalHeight;
   document.getElementById("resolution").innerText = largeImage.getAttribute("dimensions") + "\n(Click image to view original size)";
+  document.getElementById("date").innerText = largeImage.getAttribute("date");
 }
 
 
