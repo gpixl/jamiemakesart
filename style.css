@@ -33,6 +33,13 @@ h1 {
 }
 
 
+.cbox {
+  max-width: 400px;
+  display: block;
+  padding: 20px;
+  margin: 10px;
+}
+
 .box {
   background-color: #1c1959;
   border-radius: 5px;
