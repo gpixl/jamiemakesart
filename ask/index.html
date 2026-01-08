@@ -4,41 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://cdn.glitch.global/bd293175-619c-40b5-82fd-e66ca60679e1/Telescope%20PFP.png?v=1729662484998" />
-    <title>Jamie's Website</title>
+    <title>Ask me things</title>
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
+  <body style="background: #9e707d;"><a href="/" class="link" style="background-color:rgb(72, 50, 60)">Back</a>
+
     <div class="boxes">
-      <h1>Ask</h1>
+      
+      <h1>Ask me things</h1>
     </div>
     <div class="entries">
 
+              <div class="submitbox" id="submitbox">
+                <div id="submitting">
+                      <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
+                      <textarea class="input" id="inputfield" maxlength="512" placeholder="Ask a question"></textarea>
+                      <br>
+                      <input class="input button" type="submit" id="submitted" value="Submit" onclick="getVal()">
+                </div>
+              
+              </div>
 
-      <div class="box">
-        <div id="submitting">
-              <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
-              <textarea class="input" id="inputfield" placeholder="Ask a question"></textarea>
-              <br>
-              <input class="input" type="submit" id="submitted" value="Submit" onclick="getVal()">
-        </div>
+        <div class="askquestion" id="pendingresponse" style="display:none"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
+        <br><input class="input button" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
+          <img src="askpage.gif">
+    </div>
+    <hr>
+    <div class="entries">
 
-        <div id="pendingresponse" style="display:none">
-              <text>Your question has been submitted:</text><br>
-              <i id="pendingtext" class="question"></i>
-              <br><br>
-              <p>Wait patiently for your response!</p>
-        </div>
-        
-        <div id="done" style="display: none;">
-            <text style="color:white">Thank u for submitting :P</text><br>
-        </div>
-      </div>
 
-<div class="box"><i class="question" hash="153096125" date="1767828938987"><b>f asked:</b><br>burgers aren't ice. burgers are nice.</i><p>yeah i heard that</p><p class="date">January 07, 2026</p></div>
-
-<div class="box"><i class="question" hash="-316286069" date="1767828871484"><b>Anonymous asked:</b><br>ello govna</i><p>yepppp</p><p class="date">January 07, 2026</p></div>
-
-<i class="question" style="display:none" hash="-2052374012"></i><i class="question" style="display:none" hash="105643395"></i><i class="question" style="display:none" hash="-1694296589"></i><i class="question" style="display:none" hash="-1694296589"></i><i class="question" style="display:none" hash="-770270590"></i>
+<i class="question" style="display:none" hash="-2052374012"></i><i class="question" style="display:none" hash="105643395"></i><i class="question" style="display:none" hash="-1694296589"></i><i class="question" style="display:none" hash="-1694296589"></i><i class="question" style="display:none" hash="-770270590"></i><i class="question" style="display:none" hash="168975603"></i><i class="question" style="display:none" hash="228953476"></i><i class="question" style="display:none" hash="309392511"></i><i class="question" style="display:none" hash="-134333640"></i>
 
 
     </div>
@@ -46,3 +41,76 @@
 </html>
 
 <script src="script.js"></script> 
+
+<style>
+
+canvas {
+  image-rendering: pixelated;
+}
+
+.submitbox {
+  display: block;
+  padding: 1em;
+}
+
+  .askquestion {
+  max-width: 400px;
+  display: block;
+  padding: 15px;
+  margin: 20px;
+  color: white;
+}
+hr {
+  width: 50%;
+  color: #f2d5da;
+  margin-top: 4em;
+}
+
+textarea {
+  width: 200px;
+  height: 150px;
+  min-width: 150px;
+}
+
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: #f2d5da;
+  color: rgb(28, 27, 104);
+  padding: 12px;
+  border: none;
+  margin: 3px;
+}
+
+.input:focus {
+  outline: 2px solid rgb(28, 27, 104);
+}
+
+.button {
+  border-radius: 25px;
+}
+
+.button:hover {
+  outline: 1px solid rgb(28, 27, 104);
+}
+
+.date {
+  filter: opacity(0.4);
+  font-size: 80%;
+}
+
+.question {
+  display: block;
+  filter: opacity(1.0);
+  background-color: #f2d5da;
+  padding: 15px;
+  color: rgb(101, 79, 133);
+}
+</style>

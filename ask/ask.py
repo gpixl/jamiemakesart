@@ -22,7 +22,7 @@ for i in questions:
         if l > 0:
             lines[l] = "<p>" + lines[l] + "</p>"
         final += lines[l]
-    final = "<div class=\"box\">" + final.replace("\n","") + "<p class=\"date\">" + datestring + "</p></div>"
+    final = "<div class=\"askquestion\">" + final.replace("\n","") + "<p class=\"date\">" + datestring + "</p></div>"
     allquestions = final + "\n\n" + allquestions
 
 

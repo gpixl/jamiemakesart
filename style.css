@@ -7,22 +7,6 @@
 }
 
 
-.input {
-  font-family: sans-serif;
-  font-size: 13px;
-}
-
-.date {
-  filter: opacity(0.4);
-  font-size: 80%;
-}
-
-.question {
-  display: block;
-  transform: translate(-10px, 0px);
-  filter: opacity(0.7)
-}
-
 
 body {
   background: #1c1959;
@@ -39,6 +23,8 @@ a {
 h1 {
   font-family: 'header';
   font-size: 200%;
+  font-synthesis-weight: none;
+  filter:contrast(1);
 }
 
 

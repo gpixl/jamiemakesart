@@ -1,8 +1,6 @@
 
 
 
-  document.getElementById("done").style.display = "none";
-
 
 
   //https://www.w3schools.com/js/js_cookies.asp
@@ -38,6 +36,10 @@
     return hash;
   }
 
+  function resetHash() {
+    document.getElementById("submitbox").style.display = "block";
+    document.getElementById("pendingresponse").style.display = "none";
+  }
 
   function checkForMatch() {
 
@@ -56,8 +58,8 @@
       }
 
       if (!matches) {
-        document.getElementById("submitting").style.display = "none";
-        document.getElementById("pendingresponse").style.display = "inline";
+        document.getElementById("submitbox").style.display = "none";
+        document.getElementById("pendingresponse").style.display = "block";
         document.getElementById("pendingtext").innerText = getCookie("lastquestion");
       }
     }
@@ -74,15 +76,17 @@
     var text = document.getElementById("inputfield").value;
     console.log(text);
 
+    if (text.length < 2) return
+
     text = text.replace("\"","''")
 
     const request = new XMLHttpRequest();
 
-    request.open("POST", "https://discord.com/api/webhooks/1336395875236188226/5ybayeyG_WY6iYUFYfCkymi_zIsSZTKAxMEyDxwfihjbecqI_Z2AZ6zCYHI9GyQ0i-OY");
+    request.open("POST", "https://discord.com/api/webhooks/1458724180328448152/g5IuSVGwYKNq0uqQLuaUhl-hdWHK6zQD6e5x6d5v6FYcwkeWeGqUaB4CG7ktf9zpaVn2");
 
     request.setRequestHeader('Content-type', 'application/json');
 
-    message = "`<i class=\"question\" hash=\"" + toHash(text) + "\" date=\"" + Date.now() + "\"><b>" + username +" asked:</b><br>" + text + "</i>`\n\n" + text
+    message = text + "\n\n" + "`<i class=\"question\" hash=\"" + toHash(text) + "\" date=\"" + Date.now() + "\"><b>" + username +" asked:</b><br>" + text + "</i>`";
 
     askername = username + " (question)"
 
