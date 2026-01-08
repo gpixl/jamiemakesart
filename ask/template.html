@@ -27,8 +27,13 @@
 
         <div class="askquestion" id="pendingresponse" style="display:none"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
         <br><input class="input button" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
-          <img src="askpage.gif">
+        
+        <div class="box"><img src="askpage.gif"></div>
+
+        
     </div>
+    <div class="boxes"><p></p></div>
+    
     <hr>
     <div class="entries">
 
@@ -44,6 +49,10 @@
 
 <style>
 
+.box {
+  background-color: transparent;
+}
+
 canvas {
   image-rendering: pixelated;
 }
@@ -54,12 +63,22 @@ canvas {
 }
 
   .askquestion {
-  max-width: 400px;
+  max-width: 600px;
   display: block;
   padding: 15px;
   margin: 20px;
   color: white;
 }
+
+.askquestion p {
+  margin: 8px;
+}
+
+.askquestion img {
+  height: 128px;
+  margin: 1px;
+}
+
 hr {
   width: 50%;
   color: #f2d5da;
@@ -112,5 +131,15 @@ textarea {
   background-color: #f2d5da;
   padding: 15px;
   color: rgb(101, 79, 133);
+}
+
+@media all and (max-width:500px) {
+  body {
+    margin: 0px;
+  }
+
+  .askquestion {
+    padding: 0px;
+  }
 }
 </style>

@@ -20,7 +20,7 @@ for (var i = 0; i < images.length; i++) {
 
 function upscale() {
   
-  if (window.innerWidth >= 500) {
+  if (window.innerWidth >= 800) {
     if (document.getElementById('main').style.height == 'auto') {
       document.getElementById('main').style.cssText = 'height: 80vh; cursor:zoom-in;';
     } else {
@@ -28,6 +28,7 @@ function upscale() {
     }
   } else {
     window.open(document.getElementById('main').getAttribute("src"), "_blank", "noopener, noreferrer");
+    document.getElementById('main').style.cssText = 'height: 80vh; cursor:zoom-in;';
   }
 
 
