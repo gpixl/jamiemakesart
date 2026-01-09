@@ -102,6 +102,11 @@ h1 {
 }
 
 
+.back {
+  padding: 8px;
+  font-size: 80%;
+  filter: opacity(0.7);
+}
 
 .link {
   
