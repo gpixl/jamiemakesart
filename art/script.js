@@ -28,7 +28,6 @@ function upscale() {
     }
   } else {
     window.open(document.getElementById('main').getAttribute("src"), "_blank", "noopener, noreferrer");
-    document.getElementById('main').style.cssText = 'height: 80vh; cursor:zoom-in;';
   }
 
 
@@ -57,8 +56,9 @@ document.getElementById("show").style.display = "";
 
   imageToSet.style.cssText = 'height: 80vh; width: auto; cursor:zoom-in;';
 
-  if (window.innerWidth < 500) {
-    imageToSet.style.cssText = 'height: auto; cursor:default;';
+  if (window.innerWidth < 800) {
+    console.log("changed!");
+    imageToSet.style.cssText = 'width: 100%; cursor:default;';
   }
 
   var src = largeImage.getAttribute("display");
