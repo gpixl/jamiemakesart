@@ -13,84 +13,87 @@
 
     <a href="/" class="link">Back</a>
     <div class="boxes">
-      <h1>Projects I worked on</h1>
+      <div class="box">
+      <h1>Projects I helped make</h1>
+      <a class="link" onclick="Select('gamejam')" style="outline: 2px solid white;">Game Jams</a>
+      <a class="link" onclick="Select('outerwilds')">Outer Wilds Mods</a>
+      </div>
+
     </div>
 
-    <div class="boxes">
-      <p>Game Jam Games</p>
-    </div>
-    <div class="boxes">
+    <div class="boxes" id="gamejam">
       <div class="box">
         <h1>Glorbule</h1>
+        <p class="credit">My contributions: Code, Music, Sfx<br>
+        Collaborated with <a href="https://attocorrect.itch.io">Autocorrect</a> and <a href="https://bsky.app/profile/yakiyuki.bsky.social">YakiYuki</a></p>
         <img src="assets/glorbule.gif">
         <p>
           A wave shooter on a sphere - Submission to GMTK 2025
         </p>
-        <p>I programmed gameplay, made shaders and music, and made the audio and effects.</p>
-        <p class="sub">Collaborated with <a href="https://attocorrect.itch.io">Autocorrect</a> and <a href="https://bsky.app/profile/yakiyuki.bsky.social">YakiYuki</a></p>
         <a style="background:#da4e3e" class="link" href="https://attocorrect.itch.io/glorbule">Itch.io</a>
       </div>
       <div class="box">
         <h1>SG-4</h1>
+        <p class="credit">My contributions: Music, Sfx<br>
+        Collaborated with <a href="https://attocorrect.itch.io">Autocorrect</a> and <a href="https://bsky.app/profile/yakiyuki.bsky.social">YakiYuki</a></p>
         <img src="assets/SG-4.gif">
         <p>
           An endless digging game - Submission to Ludum Dare 57
         </p>
-        <p>I made the music, audio, and effects.</p>
-        <p class="sub">Collaborated with <a href="https://attocorrect.itch.io">Autocorrect</a> and <a href="https://bsky.app/profile/yakiyuki.bsky.social">YakiYuki</a></p>
         <a style="background:#d96927" class="link" href="https://ldjam.com/events/ludum-dare/57/4-superdeep">Ludum Dare</a>
       </div>
       <div class="box">
         <h1>The Crumbly Fumbly</h1>
+        <p class="credit">My contributions: Code, Shaders, Levels, Music<br>
+        Collaborated with <a href="https://nolramsstuff.com">Nolram</a></p>
         <img src="assets/CrumblyFumbly.gif">
         <p>
           A first-person platformer on crumbling islands - Submission to Ludum Dare 51
         </p>
-        <p>I programmed gameplay and made shaders and music.</p>
-        <p></p>
-        <p class="sub">Collaborated with <a href="https://nolramsstuff.com/">Nolram</a></p>
         <a style="background:#d96927" class="link" href="https://ldjam.com/events/ludum-dare/51/the-crumbly-fumbly">Ludum Dare</a>
       </div>
     </div>
 
 
-    <div class="boxes">
+    <!-- <div class="boxes">
       <div>
         <p>Mods for Outer Wilds</p>
         <p><a href="https://store.steampowered.com/app/753640/Outer_Wilds/#app_reviews_hash">What's Outer Wilds...?</a></p>
       </div>
-    </div>
-    <div class="boxes">
+    </div> -->
+    <div class="boxes"id="outerwilds" style="display:none">
       <div class="box">
         <h1>Heliostudy</h1>
+        <p class="credit">My contributions: 2D art, 3D art, music, audio<br>
+        Collaborated with <a href="https://github.com/2walker2">2Walker2</a>, <a href="https://github.com/coderCleric">coderCleric</a>, and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
         <img src="assets/Heliostudy.gif">
         <p>
           A jam mod about exploring a Nomaian educational project
         </p>
-        <p>I was the main 3D and 2D artist and made some music and audio.</p>
-        <p class="sub">Collaborated with <a href="https://github.com/2walker2">2Walker2</a>, <a href="https://github.com/coderCleric">coderCleric</a>, and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
         <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/heliostudy/">Mod Page</a>
+        <a style="background:#41a641" class="link" href="https://open.spotify.com/album/2UM3EtB8dB9WGV8xW0O08Y">Soundtrack (spotify)</a>
+        <a style="background:#bd2323" class="link" href="https://youtube.com/playlist?list=OLAK5uy_keKem647QFc7ypVmderDGu1tiITn__sG8&si=BP64L8JUZt988LA9">Soundtrack (yt)</a>
       </div>
       <div class="box">
         <h1>Astral Codec</h1>
+        <p class="credit">My contributions: 3D art, music<br>
+        Collaborated with <a href="https://github.com/2walker2">2Walker2</a> and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
         <img src="assets/AstralCodec.gif">
         <p>
           A story mod by <a href="https://github.com/2walker2">2Walker2</a> about the origin of The Interloper
         </p>
-        <p>I was the main 3D artist and made some music.</p>
-        <p class="sub">Collaborated with <a href="https://github.com/2walker2">2Walker2</a> and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
-            <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/astralcodec/">Mod Page</a>
-            <a style="background:#8d258f" class="link" href="https://www.youtube.com/watch?v=4C9uYPns-0w">Launch trailer (yt)</a>
-            <a style="background:#258f73" class="link" href="https://www.youtube.com/watch?v=akRJpEdHr_Y">Soundtrack (yt)</a>
+        <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/astralcodec/">Mod Page</a>
+        <!-- <a style="background:#bd2323" class="link" href="https://www.youtube.com/watch?v=4C9uYPns-0w">Launch trailer (yt)</a> -->
+        <a style="background:#bd2323" class="link" href="https://www.youtube.com/watch?v=akRJpEdHr_Y">Soundtrack (yt)</a>
       </div>
       <div class="box">
         <h1>Root Access</h1>
+        <p class="credit">My contributions: 3D art, music<br>
+        Collaborated with <a href="https://github.com/2walker2">2Walker2</a> and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
         <img src="assets/RootAccess.gif">
         <p>
           A jam mod about traveling to an unreachable place
         </p>
-        <p>I was the main 2D and 3D artist and made some music and audio.</p>
-        <p class="sub">Collaborated with <a href="https://github.com/2walker2">2Walker2</a> and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
         <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/rootaccess/">Mod Page</a>
       </div>
     </div>
@@ -101,10 +104,38 @@
 </html>
 
 <style>
+
+  .credit {
+    font-size: small;
+    background-color: rgba(255, 255, 255, 0.151);
+    padding: 15px;
+  }
+
   body {
-    background-color: #0b0814;
+    background: #2c277e;
   }
   .box {
-    background-color: #0b0814;
+    background: #2c277e;
   }
 </style>
+
+<script>
+
+  function Select(selection) {
+
+    links = event.target.parentNode.getElementsByClassName("link");
+    for (i = 0; i < links.length; i++) {
+      links[i].style = "";
+    }
+
+    event.target.style = "outline: 2px solid white;"
+
+    boxes = document.getElementsByClassName("boxes");
+    for(i = 0; i < boxes.length; i++) {
+       if (boxes[i].id.length > 1) {
+        boxes[i].style.display = "none";
+       }
+    }
+    document.getElementById(selection).style.display = "flex"
+  }
+</script>
