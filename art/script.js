@@ -20,14 +20,16 @@ for (var i = 0; i < images.length; i++) {
 
 function upscale() {
   
-  if (window.innerWidth >= 800) {
-    if (document.getElementById('main').style.height == 'auto') {
-      document.getElementById('main').style.cssText = 'height: 80vh; cursor:zoom-in;';
-    } else {
-      document.getElementById('main').style.cssText = 'height: auto; cursor:zoom-out;';
-    }
+  resX = parseInt(document.getElementById("resolution").innerText.split("x")[1].split("(")[0]);
+
+  if (document.getElementById('main').style.height == 'auto') {
+    document.getElementById('main').style.cssText = 'height: 80vh; cursor:zoom-in;';
   } else {
-    window.open(document.getElementById('main').getAttribute("src"), "_blank", "noopener, noreferrer");
+    if (window.innerWidth >= resX) {
+      document.getElementById('main').style.cssText = 'height: auto; cursor:zoom-out;';
+    } else {
+      window.open(document.getElementById('main').getAttribute("src"), "_blank", "noopener, noreferrer");
+    }
   }
 
 
@@ -57,7 +59,6 @@ document.getElementById("show").style.display = "";
   imageToSet.style.cssText = 'height: 80vh; width: auto; cursor:zoom-in;';
 
   if (window.innerWidth < 800) {
-    console.log("changed!");
     imageToSet.style.cssText = 'width: 100%; cursor:default;';
   }
 

@@ -33,6 +33,10 @@ h1 {
 }
 
 
+.box .banner {
+  image-rendering: pixelated;
+}
+
 .cbox {
   max-width: 400px;
   display: block;
