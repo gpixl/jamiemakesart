@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://jamiemakes.art/assets/favicon.png" />
     <title>Ask me things</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style.css?v=2" />
+    <script src="../script.js" defer></script>
   </head>
-  <body style="background: #9e707d; padding: 2%;"><a href="/" class="link" style="background-color:#905b6a">Back</a>
+  <body style="background: #9e707d; padding: 2%;">
 
     <div class="entries">
 
               <div class="submitbox" id="submitbox">
+                <a href="/" class="link" style="background-color:#905b6a"><img class="icon" src="../icons/home.png">Home</a>
                 <div id="submitting">
                       <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
                       <textarea class="input" id="inputfield" maxlength="512" placeholder="Ask a question or say something silly and I may answer it"></textarea>
@@ -24,7 +26,7 @@
         <div class="askquestion" id="pendingresponse" style="display:none"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
         <br><input class="input button" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
         
-        <div class="box"><img src="askpage.gif"></div>
+        <div class="box"><img class="banner" src="askpage.gif"></div>
 
         
     </div>

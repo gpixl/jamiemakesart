@@ -1,15 +1,15 @@
 
 var images = document.getElementsByTagName('img'); 
 for (var i = 0; i < images.length; i++) {
-  if (images[i].getAttribute("display") != null) {
-    images[i].src = images[i].getAttribute("display").replace(".gif", ".png").replace("assets/", "assets/thumbnails/").replace(".jpg",".png")
+  if (images[i].getAttribute("link") != null) {
+    images[i].src = images[i].getAttribute("display").replace(".gif", ".png").replace("assets/", "assets/thumbnails/").replace(".jpg",".png");
   }
 }
 
   var imageNodes = document.getElementsByTagName('img');
   for (var i=0; i<imageNodes.length; i++)
   {
-    if (imageNodes[i].id != "main") {
+    if (imageNodes[i].id != "main" && imageNodes[i].getAttribute("class") != "icon") {
       imageNodes[i].setAttribute("onclick","setimage();");
       imageNodes[i].setAttribute("class", "img");
     }
