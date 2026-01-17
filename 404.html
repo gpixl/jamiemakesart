@@ -11,9 +11,99 @@
   <body>
     <div class="boxes">
       <div class="box">
-        <p>Could not find that page</p>
+        <h2>Could not find that page</h2>
         <a href="/" class="link"><img class="icon" src="icons/home.png">Home</a>
+        <canvas id="orbit" width="384" height="256"></canvas>
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  canvas = document.getElementById("orbit");
+  const ctx = canvas.getContext("2d");
+  
+  const planet = {
+    x:0,
+    y:0,
+    size:100,
+    dist:15,
+    opacity: 255,
+    pid:-1,
+    dir:1
+  }
+
+
+
+  planets = [];
+  planets.length = 50;
+
+  for (i=0; i < planets.length; i++) {
+     planets[i] = Object.create(planet);
+
+     
+     planets[i].size = Math.random() * 7;
+     pid = Math.floor((Math.random() * i-1));
+
+     planets[i].pid = pid;
+     
+     if (pid >= 0) {
+      planets[i].dist = planets[pid].dist * Math.random();
+     } else {
+      planets[i].dist = (Math.random() * 45) + 50;
+     }
+     planets[i].opacity = 1 - (planets[i].dist / 200);
+     if (Math.random() > 0.9) {
+      planets[i].dir = -1;
+     }
+     if (planets[i].dist < 4) planets[i].dist = 4;
+  }
+
+
+  centerx = canvas.width / 2;
+  centery = canvas.height / 2;
+
+
+
+
+  function repeatOften() {
+    ctx.fillStyle = "DarkSlateBlue";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+
+    for(i = 0; i < planets.length; i++) {
+
+      time = ((Date.now() / 30) / planets[i].dist) * planets[i].dir;
+
+      parentx = centerx;
+      parenty = centery;
+      if (planets[i].pid > -1) {
+        pid = planets[i].pid;
+
+        parentx = planets[pid].x;
+        parenty = planets[pid].y;
+
+
+      }
+      ctx.beginPath();
+      ctx.arc(parentx, parenty, planets[i].dist, 0, 2 * Math.PI);
+      ctx.strokeStyle = `rgb(245, 245, 220, ${planets[i].opacity})`;
+      ctx.stroke();
+
+      planets[i].x = (Math.cos(time) * planets[i].dist) + parentx;
+      planets[i].y = (Math.sin(time) * planets[i].dist) + parenty;
+
+      ctx.beginPath();
+      ctx.arc(planets[i].x, planets[i].y, planets[i].size, 0, 2 * Math.PI);
+      ctx.fillStyle = `rgb(245, 245, 220, ${planets[i].opacity})`;
+      ctx.fill();
+    }
+
+
+    
+    requestAnimationFrame(repeatOften);
+  }
+  requestAnimationFrame(repeatOften);
+
+</script>
