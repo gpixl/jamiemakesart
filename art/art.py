@@ -1,5 +1,5 @@
 import PIL
-from PIL import Image
+from PIL import Image, ImagePalette
 import os
 
 
@@ -48,7 +48,10 @@ for i in images:
             resize = og.crop((uppercrop,0,og.height+uppercrop, og.height))
         else:
             resize = og.crop((0,uppercrop*-1,og.width, og.width-uppercrop))
-        resize = resize.resize((128, 128), Image.NEAREST)
+        resize = resize.resize((512, 512))
+        resize = resize.convert("RGBA")
+        resize = resize.resize((128, 128))
+
 
         thumbnail = Image.new("RGBA", (128,128))
         thumbnail.paste(resize, (0,0))
