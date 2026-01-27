@@ -82,7 +82,7 @@
 
     const request = new XMLHttpRequest();
 
-    request.open("POST", "https://discord.com/api/webhooks/1458724180328448152/g5IuSVGwYKNq0uqQLuaUhl-hdWHK6zQD6e5x6d5v6FYcwkeWeGqUaB4CG7ktf9zpaVn2");
+    request.open("POST", "https://discord.com/api/webhooks/1465578886422069358/Pr2iqku-eV0NFuWUyyqCKUCHQY5qfS8uP3k7gB--ZCVkVA3pRuEvNtd5kAITIQUhwQA4");
 
     request.setRequestHeader('Content-type', 'application/json');
 
