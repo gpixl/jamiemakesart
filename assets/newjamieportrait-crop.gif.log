@@ -17,5 +17,5 @@ Output #0, gif, to 'D:/Github/jamiemakesart/assets/newjamieportrait-crop.gif':
   Stream #0:0: Video: gif, pal8(pc, gbr/unknown/unknown, progressive), 384x256 [SAR 1:1 DAR 3:2], q=2-31, 200 kb/s, 2 fps, 100 tbn
     Metadata:
       encoder         : Lavc59.37.100 gif
-frame=    1 fps=0.0 q=-0.0 size=       0kB time=00:00:00.01 bitrate=   0.0kbits/s speed=0.665x    frame=    2 fps=0.0 q=-0.0 Lsize=      10kB time=00:00:00.51 bitrate= 165.8kbits/s speed=10.9x    
+frame=    1 fps=0.0 q=-0.0 size=       0kB time=00:00:00.01 bitrate=   0.0kbits/s speed=0.543x    frame=    2 fps=0.0 q=-0.0 Lsize=      10kB time=00:00:00.51 bitrate= 165.8kbits/s speed=10.3x    
 video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.189573%
