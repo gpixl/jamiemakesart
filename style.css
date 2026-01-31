@@ -37,6 +37,17 @@ h1 {
   image-rendering: pixelated;
 }
 
+.hiddenboxes {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiddenboxes:target {
+  display: flex;
+}
+
 .cbox {
   max-width: 400px;
   display: block;

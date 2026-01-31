@@ -15,6 +15,11 @@ list_files_recursive()
 
 print("Confirm all changes to all HTML files!!")
 
+filetype = input("File (with extension):\n")
+
+if len(filetype) < 2:
+    quit()
+
 oldVersion = input("Old version:\n")
 newVersion = input("New version:\n")
 
@@ -23,9 +28,9 @@ for i in allfiles:
     if ".html" in i:
         thisfile = open(i).read()
 
-        if "style.css?v=" + str(oldVersion) + "\"" in thisfile:
+        if filetype + "?v=" + str(oldVersion) + "\"" in thisfile:
             changedFiles += 1
-            thisfile = thisfile.replace("style.css?v=" + str(oldVersion) + "\"","style.css?v=" + str(newVersion) + "\"")
+            thisfile = thisfile.replace(filetype + "?v=" + str(oldVersion) + "\"",filetype + "?v=" + str(newVersion) + "\"")
             with open(i, "w") as f:
                 f.write(thisfile)
 

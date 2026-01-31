@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://jamiemakes.art/assets/favicon.png" />
     <title>Projects</title>
-    <link rel="stylesheet" href="../style.css?v=4" />
-    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="../style.css?v=5" />
+    <script src="../script.js?v=1" defer></script>
   </head>
   <body>
     
@@ -21,7 +21,7 @@
 
     </div>
 
-    <div class="boxes" id="gamejam">
+    <div class="hiddenboxes" id="gamejam">
       <div class="box">
         <h1>Glorbule</h1>
         <p class="credit">My contributions: Code, Music, Sfx<br>
@@ -61,7 +61,7 @@
         <p><a href="https://store.steampowered.com/app/753640/Outer_Wilds/#app_reviews_hash">What's Outer Wilds...?</a></p>
       </div>
     </div> -->
-    <div class="boxes"id="outerwilds" style="display:none">
+    <div class="hiddenboxes"id="outerwilds">
       <div class="box">
         <h1>Heliostudy</h1>
         <p class="credit">My contributions: 2D art, 3D art, music, audio<br>
@@ -128,7 +128,7 @@
 
   function Select(selection) {
 
-
+    window.location.hash = selection
     links = event.target.parentNode.getElementsByClassName("link");
     for (i = 0; i < links.length; i++) {
       links[i].style = "";
@@ -136,12 +136,22 @@
 
     event.target.style = "outline: 4px double white;"
 
-    boxes = document.getElementsByClassName("boxes");
+    boxes = document.getElementsByClassName("hiddenboxes");
     for(i = 0; i < boxes.length; i++) {
        if (boxes[i].id.length > 1) {
         boxes[i].style.display = "none";
        }
     }
     document.getElementById(selection).style.display = "flex"
+  }
+
+  links = document.getElementsByClassName("link");
+  for (i = 0; i < links.length; i++) {
+      if (links[i].getAttribute('onclick') != null) {
+        links[i].style = "none";
+      }
+      if (links[i].getAttribute('onclick') == 'Select(\'' + window.location.hash.replace("#","") + '\')') {
+        links[i].style = "outline: 4px double white;"
+      }
   }
 </script>
