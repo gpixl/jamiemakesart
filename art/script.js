@@ -10,7 +10,7 @@ for (var i = 0; i < images.length; i++) {
   for (var i=0; i<imageNodes.length; i++)
   {
     if (imageNodes[i].id != "main" && imageNodes[i].getAttribute("class") != "icon") {
-      imageNodes[i].setAttribute("onclick","setimage();");
+      imageNodes[i].setAttribute("onclick","setimage(this);");
       imageNodes[i].setAttribute("class", "img");
     }
 
@@ -35,13 +35,12 @@ function upscale() {
 
 }
 
-function setimage() {
+function setimage(thisElement) {
 
 document.getElementById("show").style.display = "";
 
-  var largeImage = event.srcElement;
+  var largeImage = thisElement;
 
-  window.scrollTo(0, 0);
   var imageToSet = document.getElementById("main");
 
   var height = largeImage.naturalHeight;
@@ -71,8 +70,15 @@ document.getElementById("show").style.display = "";
   var height = imageToSet.naturalHeight;
   document.getElementById("resolution").innerText = largeImage.getAttribute("dimensions") + "\n(Click image to view original size)";
   document.getElementById("date").innerText = largeImage.getAttribute("date");
+
+  window.scrollTo(0, 0);
+  history.pushState({}, "", "#" +  largeImage.getAttribute("id"));
 }
 
+
+if (window.location.hash) {
+  setimage(document.getElementById(window.location.hash.replace("#", "")))
+}
 
 function newWindow() {
   top.location.href = location.href;
