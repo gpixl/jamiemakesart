@@ -9,15 +9,13 @@ function hide() {
 }
 
 function showele(ele) {
-  ele = document.getElementById(ele);
+  if (ele) {
+    window.location.hash = ele;
+    ele = document.getElementById(ele);
     if (ele != null) {
-    if (ele.style.display == "none") {
       ele.style.display = "flex";
-    } else {
-      ele.style.display = "none;"
     }
   }
-
 }
 
 function copy(copyText,ele,returnText) {

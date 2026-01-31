@@ -6,7 +6,7 @@
     <link rel="icon" href="https://jamiemakes.art/assets/favicon.png" />
     <title>Projects</title>
     <link rel="stylesheet" href="../style.css?v=5" />
-    <script src="../script.js?v=1" defer></script>
+    <script src="../script.js?v=2" defer></script>
   </head>
   <body>
     
@@ -21,7 +21,7 @@
 
     </div>
 
-    <div class="hiddenboxes" id="gamejam">
+    <div class="hiddenboxes" id="gamejam" style="display:flex">
       <div class="box">
         <h1>Glorbule</h1>
         <p class="credit">My contributions: Code, Music, Sfx<br>
@@ -145,13 +145,16 @@
     document.getElementById(selection).style.display = "flex"
   }
 
-  links = document.getElementsByClassName("link");
-  for (i = 0; i < links.length; i++) {
-      if (links[i].getAttribute('onclick') != null) {
-        links[i].style = "none";
-      }
-      if (links[i].getAttribute('onclick') == 'Select(\'' + window.location.hash.replace("#","") + '\')') {
-        links[i].style = "outline: 4px double white;"
-      }
+  if (window.location.hash) {
+    links = document.getElementsByClassName("link");
+    for (i = 0; i < links.length; i++) {
+        if (links[i].getAttribute('onclick') != null) {
+          links[i].style = "none";
+        }
+        if (links[i].getAttribute('onclick') == 'Select(\'' + window.location.hash.replace("#","") + '\')') {
+          links[i].style = "outline: 4px double white;"
+        }
+    }
   }
+
 </script>
