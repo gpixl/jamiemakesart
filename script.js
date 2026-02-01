@@ -10,7 +10,7 @@ function hide() {
 
 function showele(ele) {
   if (ele) {
-    window.location.hash = ele;
+    // window.location.hash = ele;
     ele = document.getElementById(ele);
     if (ele != null) {
       ele.style.display = "flex";

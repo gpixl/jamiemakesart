@@ -72,7 +72,7 @@ document.getElementById("show").style.display = "";
   document.getElementById("date").innerText = largeImage.getAttribute("date");
 
   window.scrollTo(0, 0);
-  history.pushState({}, "", "#" +  largeImage.getAttribute("id"));
+  // history.pushState({}, "", "#" +  largeImage.getAttribute("id"));
 }
 
 
