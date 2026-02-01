@@ -3,8 +3,7 @@ canvas = document.getElementById("starfield");
 const ctx = canvas.getContext("2d");
 
 
-ctx.canvas.width = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
+
 
 const star = {
   x:0.0,
@@ -25,7 +24,8 @@ for (i = 0; i < stars.length; i++) {
 
 let lasttime;
 function repeatOften(timestamp) {
-
+  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
   delta = Math.round(timestamp - lasttime);
 
   lasttime = timestamp;
