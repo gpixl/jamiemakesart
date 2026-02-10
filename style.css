@@ -45,15 +45,15 @@ h1 {
   image-rendering: pixelated;
 }
 
-.hiddenboxes {
-  display: none;
+.hiddendiv {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 
-.hiddenboxes:target {
-  display: flex;
+.hiddendiv:target {
+  display:block;
 }
 
 .cbox {
