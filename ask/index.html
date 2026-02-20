@@ -10,21 +10,21 @@
   </head>
   <body style="background: #9e707d; padding: 2%;">
 
+    <div class="boxes"><a href="/" class="link" style="background-color:#905b6a"><img class="icon" src="../icons/home.png">Home</a></div>
     <div class="entries">
-
               <div class="submitbox" id="submitbox">
-                <a href="/" class="link" style="background-color:#905b6a"><img class="icon" src="../icons/home.png">Home</a>
                 <div id="submitting">
                       <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
                       <textarea class="input" id="inputfield" maxlength="512" placeholder="Ask a question or say something silly and I may answer it"></textarea>
                       <br>
-                      <input class="input button" type="submit" id="submitted" value="Submit" onclick="getVal()">
+                      <input class="link" style="background-color:#905b6a" type="submit" id="submitted" value="Submit" onclick="getVal()">
                 </div>
               
               </div>
 
+
         <div class="askquestion" id="pendingresponse" style="display:none"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
-        <br><input class="input button" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
+        <br><input class="link" style="background-color:#905b6a" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
         
         <div class="box"><img class="banner" src="askpage.gif"></div>
 
@@ -36,9 +36,9 @@
     <div class="entries">
 
 
-<div class="askquestion"><i class="question" hash="1706060900" date="1771348233835"><b>Anonymous asked:</b><br>Are there cookies at the function?</i><p></p><p>Yeah I think so</p><p class="date">February 17, 2026</p></div>
-
 <div class="askquestion"><i class="question" hash="-539156628" date="1770084733011"><b>BellHop asked:</b><br>Oh, hey! Didn't know this feature was here<br>Anyhow, do you have any designs of yours that you wish you could draw more &/or give more love in general?</i><p></p><p>Ooohhhh hmmm that's a good question...</p><p>I think all the characters that I've <i>designed</i> are characters I draw a decent amount to my own satisfaction, but there are a lot of vague character ideas that I toss and turn in my head that I really want to exist eventually but haven't gotten around to making yet...</p><p>Like, I reeeally wanna make robot characters or, like, just characters for a science fiction universe. They would definitely still be furry-coded (teehee) but I would want them to be a specific sort of species or fit into a sensible world rather than the magic-y nonsense half-worldbuilding I do for Staraway (Which for Staraway is perfectly fine, it's not a worldbuilding project, it's a narrative game about transgender animals. But I yearn to worldbuild someday)</p><p>I really want to eventually break out of the "cute" character style I have for Staraway and do stuff that's a lot more crazy and out there... But that doesn't have to happen anytime soon haha</p><p>I also want to draw my silly Banana Slug and Giraffe more because I like them a lot... And because a snake is asking this question, I should mention that I want to make another snake character and I have some ideas for that but we will see if that becomes of anything...</p><p class="date">February 02, 2026</p></div>
+
+<div class="askquestion"><i class="question" hash="1706060900" date="1771348233835"><b>Anonymous asked:</b><br>Are there cookies at the function?</i><p></p><p>Yeah I think so </p><p class="date">February 17, 2026</p></div>
 
 <div class="askquestion"><i class="question" hash="-408118501" date="1767911501542"><b>Leslie :3 asked:</b><br>Will planet suckulon 5 appear in staraway :33</i><p>No, but it will appear in <b>Staraway 2: Journey to Planet Suckulon 5</b></p><p class="date">January 08, 2026</p></div>
 
@@ -104,6 +104,10 @@ textarea {
   justify-content: center;
 }
 
+.link {
+  border: none;
+}
+
 .input {
   font-family: sans-serif;
   font-size: 15px;
@@ -118,13 +122,7 @@ textarea {
   outline: 2px solid rgb(28, 27, 104);
 }
 
-.button {
-  border-radius: 25px;
-}
 
-.button:hover {
-  outline: 1px solid rgb(28, 27, 104);
-}
 
 .date {
   filter: opacity(0.4);

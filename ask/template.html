@@ -10,21 +10,21 @@
   </head>
   <body style="background: #9e707d; padding: 2%;">
 
+    <div class="boxes"><a href="/" class="link" style="background-color:#905b6a"><img class="icon" src="../icons/home.png">Home</a></div>
     <div class="entries">
-
               <div class="submitbox" id="submitbox">
-                <a href="/" class="link" style="background-color:#905b6a"><img class="icon" src="../icons/home.png">Home</a>
                 <div id="submitting">
                       <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
                       <textarea class="input" id="inputfield" maxlength="512" placeholder="Ask a question or say something silly and I may answer it"></textarea>
                       <br>
-                      <input class="input button" type="submit" id="submitted" value="Submit" onclick="getVal()">
+                      <input class="link" style="background-color:#905b6a" type="submit" id="submitted" value="Submit" onclick="getVal()">
                 </div>
               
               </div>
 
+
         <div class="askquestion" id="pendingresponse" style="display:none"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
-        <br><input class="input button" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
+        <br><input class="link" style="background-color:#905b6a" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
         
         <div class="box"><img class="banner" src="askpage.gif"></div>
 
@@ -96,6 +96,10 @@ textarea {
   justify-content: center;
 }
 
+.link {
+  border: none;
+}
+
 .input {
   font-family: sans-serif;
   font-size: 15px;
@@ -110,13 +114,7 @@ textarea {
   outline: 2px solid rgb(28, 27, 104);
 }
 
-.button {
-  border-radius: 25px;
-}
 
-.button:hover {
-  outline: 1px solid rgb(28, 27, 104);
-}
 
 .date {
   filter: opacity(0.4);
