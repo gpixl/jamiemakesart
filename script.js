@@ -17,6 +17,11 @@ function showele(ele) {
     }
   }
 }
+function setloc(ele) {
+  if (ele) {
+    window.location.hash = ele;
+  }
+}
 
 function copy(copyText,ele,returnText) {
 
