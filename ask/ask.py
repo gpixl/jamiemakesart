@@ -5,6 +5,17 @@ questions = os.listdir("responses")
 os.chdir("responses/")
 questions.sort(key=os.path.getctime)
 
+
+class question:
+    lines = []
+    date = ""
+
+def sortByDate(e):
+  return e.date
+
+
+questionobjects = []
+
 allquestions = ""
 for i in questions:
 
@@ -13,9 +24,24 @@ for i in questions:
 
     date = lines[0].split("\"")[5].replace("\n", "")
     date = float(date)
-    realdate = datetime.fromtimestamp(date/1000)
-    datestring = realdate.strftime('%B %d, %Y')
     
+
+    q = question()
+    q.lines = lines
+    q.date = date
+
+    questionobjects.append(q)
+
+
+questionobjects.sort(key=sortByDate)
+
+for i in questionobjects:
+    lines = i.lines
+
+    print("gonna print date")
+    print(i.date)
+    realdate = datetime.fromtimestamp(i.date/1000)
+    datestring = realdate.strftime('%B %d, %Y')
 
     final = ""
     for l in range(len(lines)):
