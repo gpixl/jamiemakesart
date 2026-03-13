@@ -1,16 +1,47 @@
 from PIL import Image
 import os
-
+from datetime import time
+from datetime import datetime
 
 videos = os.listdir("video")
 print(videos)
 
 links = ""
+firstvideo = ""
+
+
+class video:
+    source = ""
+    name = ""
+    date = datetime
+
+
+videoobjects = []
 
 for i in videos:
+    newVideo = video()
+    name = i.split(".")[0]
+    name = name.replace("\\u200", "")
+    name = name.replace("\\u200e", "")
+    newVideo.date = datetime.strptime(name, "%b-%d-%Y")
+    newVideo.source = "video/" + i
+    newVideo.name = name
+
+    
+
+    videoobjects.append(newVideo)
+    
+
+def sortByDate(e):
+  return e.date.timestamp() * -1
+
+videoobjects.sort(key=sortByDate)
+
+for i in videoobjects:
 
 
-    os.system("ffmpeg -i video/" + i + " -vf \"select=eq(n\,0)\" -q:v 3 output_image.png")
+    # os.system("ffmpeg -i " + i.source + " -vcodec mjpeg -vframes 1 -an -f rawvideo -ss `ffmpeg -i " + i.source + " 2>&1 | grep Duration | awk '{print $2}' | tr -d , | awk -F ':' '{print ($3+$2*60+$1*3600)/2}'` output_image.png")
+    os.system("ffmpeg -i " + i.source + " -vf \"select=eq(n\,0)\" -q:v 3 output_image.png")
 
     og = Image.open("output_image.png")
 
@@ -22,7 +53,7 @@ for i in videos:
     else:
         resize = og.crop((0,uppercrop*-1,og.width, og.width-uppercrop))
     
-    name = i.split(".")[0]
+    name = i.name
 
     thumbnail = resize.resize((256,256))
     cropSize = 256/2/2
@@ -30,16 +61,23 @@ for i in videos:
 
     thumbnail = thumbnail.convert("P")
 
-    thumbnail.save("thumbnails/" + name + ".png")
+    thumbnail.save("thumbnails/" + i.name + ".png")
     os.remove("output_image.png")
-    links += "<div class=\"img-wrap\"><img src=\"thumbnails/" + name + ".png\"><a class=\"img-text\" href=\"video/" + i + "\">3-13-2026</a></div>"
+
+    timecreated = i.date
+
+    print(timecreated.strftime('%m/%d/%Y'))
+
+
+
+    links += "<div class=\"img-wrap\" onclick=\"setVideo('" + i.source + "')\"><img src=\"thumbnails/" + i.name + ".png\"><p class=\"img-text\">" + timecreated.strftime('%b %d, %Y') + "</p></div>\n"
+    if firstvideo == "":
+       firstvideo = i.source
 
 site = open("template.html").read()
-sections = site.split("<!-- VIDEOS GO HERE -->")
 
-print(sections)
-
-newsite = sections[0] + links + sections[1]
+newsite = site.replace("<!-- VIDEOS GO HERE -->", links)
+newsite = newsite.replace("<!-- SOURCE GOES HERE -->", "<source id=\"source\" src=\"" + firstvideo + "\">")
 
 with open("videos.html", "w") as f:
   f.write(newsite)

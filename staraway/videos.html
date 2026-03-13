@@ -9,31 +9,82 @@
     <script src="/script.js?v=4" defer></script>
   </head>
   <body>
+    <div class="boxes">
+      <div class="box">
+      <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a>
+      <p>
+        These videos won't spoil any story info, but if you want to play the game blind, don't watch these
+      </p>
+      </div>
 
-    <div class="img-wrap"><img src="thumbnails/Movie_022.png"><a class="img-text" href="video/Movie_022.mp4">3-13-2026</a></div><div class="img-wrap"><img src="thumbnails/Movie_023.png"><a class="img-text" href="video/Movie_023.mp4">3-13-2026</a></div>
+    </div>
+
+    <div class="boxes">
+      <div class="box" style="max-width: fit-content; align-self:baseline;">
+        <video id="video" height="512" controls>
+<source id="source" src="video/Feb-24-2026.mp4">
+        </video>
+      </div>
+
+      <div class="box">
+<div class="img-wrap" onclick="setVideo('video/Feb-24-2026.mp4')"><img src="thumbnails/Feb-24-2026.png"><p class="img-text">Feb 24, 2026</p></div>
+<div class="img-wrap" onclick="setVideo('video/Nov-11-2025.mp4')"><img src="thumbnails/Nov-11-2025.png"><p class="img-text">Nov 11, 2025</p></div>
+<div class="img-wrap" onclick="setVideo('video/Oct-31-2025.mp4')"><img src="thumbnails/Oct-31-2025.png"><p class="img-text">Oct 31, 2025</p></div>
+<div class="img-wrap" onclick="setVideo('video/Jun-14-2025.mp4')"><img src="thumbnails/Jun-14-2025.png"><p class="img-text">Jun 14, 2025</p></div>
+<div class="img-wrap" onclick="setVideo('video/Jun-13-2025.mp4')"><img src="thumbnails/Jun-13-2025.png"><p class="img-text">Jun 13, 2025</p></div>
+<div class="img-wrap" onclick="setVideo('video/Apr-17-2025.mp4')"><img src="thumbnails/Apr-17-2025.png"><p class="img-text">Apr 17, 2025</p></div>
+<div class="img-wrap" onclick="setVideo('video/Jul-18-2024.mp4')"><img src="thumbnails/Jul-18-2024.png"><p class="img-text">Jul 18, 2024</p></div>
+
+      </div>
+    </div>
 
 
   </body>
 </html>
 
+<script>
+
+  // https://stackoverflow.com/questions/5235145/changing-source-on-html5-video-tag
+
+  function setVideo(newVideo) {
+
+
+    var video = document.getElementById('video');
+    var source = document.getElementById('source');
+
+    source.setAttribute('src', newVideo);
+    video.load();
+  }
+
+</script>
+
+
 <style>
+
+    .boxes {
+      flex-direction: row-reverse;
+    }
 
     .img-wrap {
         position: relative;
         width: 128px;
         height: 128px;
         margin: 3px;
-        border-radius: 1px;
+    }
+
+    .img-wrap:hover > img {
+      cursor: pointer;
+      filter:opacity(30%);
     }
 
     .img-text {
         display: block;
-        padding-top: 12px;
         text-align: center;
         position: absolute;
         top: 0px;
         font-size: 80%;
         width: 128px;
         height: 128px;
+        pointer-events: none;
     }
 </style>
