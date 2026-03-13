@@ -11,18 +11,9 @@
   <body>
     
 
-    <div class="boxes">
-      <div class="cbox">
-      <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a>
-      <h1>Projects I helped make</h1>
-      <a class="link" onclick="Select('gamejam')" style="outline: 4px double white;"><img class="icon" src="../icons/projects.png">Game Jams</a>
-      <a class="link" onclick="Select('outerwilds')"><img class="icon" src="../icons/outerwilds.png">Outer Wilds Mods</a>
-      </div>
 
-    </div>
-
-    <div class="hiddendiv" id="gamejam" style="display:block">
-      <div class="boxes">
+    <div style="overflow-x:scroll">
+      <div style="display: flex;">
         <div class="box">
           <h1>Glorbule</h1>
           <p class="credit">My contributions: Code, Music, Sfx<br>
@@ -52,6 +43,40 @@
             A first-person platformer on crumbling islands <br>(Submission to Ludum Dare 51 in 2022)
           </p>
           <a style="background:#d96927" class="link" href="https://ldjam.com/events/ludum-dare/51/the-crumbly-fumbly"><img class="icon" src="../icons/ludumdare.png">Ludum Dare</a>
+        </div>
+        <div class="box">
+          <h1>Heliostudy</h1>
+          <p class="credit">My contributions: 2D art, 3D art, music, audio<br>
+          Collaborated with <a href="https://github.com/2walker2">2Walker2</a>, <a href="https://github.com/coderCleric">coderCleric</a>, and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
+          <img class="banner" src="assets/Heliostudy.gif">
+          <p>
+            A mod about exploring a Nomaian educational project <br>(created for the July 2025 mod jam)
+          </p>
+          <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/heliostudy/"><img alt=" " class="icon" src="../icons/outerwilds.png">Mod Page</a>
+          <a style="background:#41a641" class="link" href="https://open.spotify.com/album/2UM3EtB8dB9WGV8xW0O08Y"><img class="icon" src="../icons/spotify.png">Soundtrack (spotify)</a>
+          <a style="background:#ff5468" class="link" href="https://youtube.com/playlist?list=OLAK5uy_keKem647QFc7ypVmderDGu1tiITn__sG8&si=BP64L8JUZt988LA9"><img class="icon" src="../icons/ytmusic.png">Soundtrack (yt)</a>
+        </div>
+        <div class="box">
+          <h1>Astral Codec</h1>
+          <p class="credit">My contributions: 3D art, music<br>
+          Collaborated with <a href="https://github.com/2walker2">2Walker2</a> and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
+          <img class="banner" src="assets/AstralCodec.gif">
+          <p>
+            A full story mod by <a href="https://github.com/2walker2">2Walker2</a> about the origin of The Interloper
+          </p>
+          <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/astralcodec/"><img class="icon" src="../icons/outerwilds.png">Mod Page</a>
+          <!-- <a style="background:#bd2323" class="link" href="https://www.youtube.com/watch?v=4C9uYPns-0w">Launch trailer (yt)</a> -->
+          <a style="background:#ff5468" class="link" href="https://www.youtube.com/watch?v=akRJpEdHr_Y"><img class="icon" src="../icons/ytmusic.png">Soundtrack (yt)</a>
+        </div>
+        <div class="box">
+          <h1>Root Access</h1>
+          <p class="credit">My contributions: 3D art, music<br>
+          Collaborated with <a href="https://github.com/2walker2">2Walker2</a> and <a href="https://github.com/JohnCorby">JohnCorby</a></p>
+          <img class="banner" src="assets/RootAccess.gif">
+          <p>
+            A mod about traveling to an unreachable place <br>(created for the October 2024 mod jam)
+          </p>
+          <a style="background:#d96927" class="link" href="https://outerwildsmods.com/mods/rootaccess/"><img class="icon" src="../icons/outerwilds.png">Mod Page</a>
         </div>
       </div>
     </div>
@@ -121,6 +146,12 @@
     font-style: italic;
   }
 
+  body {
+    background: #2c277e;
+  }
+  .box {
+    background: #2c277e;
+  }
 </style>
 
 <script>
