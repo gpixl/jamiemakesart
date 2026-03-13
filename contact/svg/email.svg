@@ -1,0 +1,15 @@
+<svg viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+
+text {
+	dominant-baseline: middle;
+	fill: #fff;
+	font-family: serif;
+	font-size: 16px;
+}
+</style>
+
+<text x="-100%" y="50%">E-mail: &#x6c;&#x65;&#x7a;&#x7a;&#x6c;&#x65;&#x62;&#x69;&#x74;&#x20;&#x28;&#x61;&#x74;&#x29;&#x20;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</text>
+
+</svg>

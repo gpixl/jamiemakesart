@@ -27,7 +27,7 @@ body {
   background: #1c1959;
   color: white;
   float: center;
-  font-family: sans-serif;
+  font-family: serif;
 }
 
 a {
@@ -35,8 +35,9 @@ a {
 }
 
 h1 {
+  filter: contrast(5000%);
   font-family: 'header';
-  font-size: 200%;
+  font-size: 180%;
   font-synthesis-weight: none;
 }
 
@@ -65,7 +66,6 @@ h1 {
 
 .box {
   background-color: #1c1959;
-  border-radius: 5px;
   max-width: 400px;
   display: block;
   padding: 20px;
@@ -138,13 +138,13 @@ h1 {
 .link {
   
 
+  background-color: #3d3983;
   font-style: italic;
   border-radius: 17px;
   color: white;
   text-decoration: none;
-  background: #5364b5;
   padding: 8px;
-  font-size: 80%;
+  font-size: 90%;
   margin-bottom: 5px;
   padding-right: 12px;
   

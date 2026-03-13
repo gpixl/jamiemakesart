@@ -5,38 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://jamiemakes.art/assets/favicon.png" />
     <title>Ask me things</title>
-    <link rel="stylesheet" href="../style.css?v=7" />
+    <link rel="stylesheet" href="../style.css?v=8" />
     <script src="../script.js?v=4" defer></script>
   </head>
-  <body style="background: #9e707d; padding: 2%;">
+  <body style="padding: 1%;">
 
-    <div class="boxes"><a href="/" class="link" style="background-color:#905b6a"><img class="icon" src="../icons/home.png">Home</a></div>
-    <div class="entries">
-              <div class="submitbox" id="submitbox">
-                <div id="submitting">
-                      <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
-                      <textarea class="input" id="inputfield" maxlength="512" placeholder="Ask a question or say something silly and I may answer it"></textarea>
-                      <br>
-                      <input class="link" style="background-color:#905b6a" type="submit" id="submitted" value="Submit" onclick="getVal()">
-                </div>
-              
-              </div>
+    <div class="boxes">
 
 
-        <div class="askquestion" id="pendingresponse" style="display:none"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
-        <br><input class="link" style="background-color:#905b6a" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
-        
-        <div class="box"><img class="banner" src="askpage.gif"></div>
+      <div class="box">
+        <div>
+          <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a>
+          <div class="entries">
+                    <div class="submitbox" id="submitbox">
+                      <div id="submitting">
+                            <input class="input" type="text" id="username" maxlength="32" placeholder="Name (optional)"><br>
+                            <textarea class="input" id="inputfield" style="max-width: 400px;" maxlength="1024" placeholder="Ask a question or say something silly and I may answer it"></textarea>
+                            <br>
+                            <input class="link" type="submit" id="submitted" value="Submit" onclick="getVal()">
+                      </div>
+                    </div>
 
-        
-    </div>
-    <div class="boxes"><p></p></div>
-    
-    <hr>
-    <div class="entries">
+
+              <div class="askquestion" id="pendingresponse" style="display:none; max-width: 300px;"><p>You submitted this question. It's now pending approval and I might answer it eventually! Wow</p><i class="question" id="pendingtext"></i>
+              <br><input class="link" type="submit" id="reset" value="Submit another" onclick="resetHash()"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="entries">
+          
 
 
-<div class="askquestion"><i class="question" hash="-262892497" date="1773265146998"><b>richard asked:</b><br>how many</i><p><img src="assets/3-11-2026-richard/seven.png"></p><p class="date">March 11, 2026</p></div>
+    <div class="askquestion"><i class="question" hash="-262892497" date="1773265146998"><b>richard asked:</b><br>how many</i><p><img src="assets/3-11-2026-richard/seven.png"></p><p class="date">March 11, 2026</p></div>
 
 <div class="askquestion"><i class="question" hash="-2142573192" date="1772817832903"><b>Anonymous asked:</b><br>Your game system is amazing. How did you learn to code? (Are there any recommendation on references and study tips?)</i><p></p><p>I spent a lot of my childhood making games on <a href="https://scratch.mit.edu">Scratch</a>, which taught me a lot about the logic of programming. I think it's a pretty good starting point for beginners who have absolutely zero coding experience!</p><p>But when I tried to pick up a mainstream game engine (I settled on Unity) I was thrown off by the fact that I had to actually write code instead of dragging blocks around. It took me a while to get used to, and I slowly eased myself into learning Unity through a visual scripting add-on called Bolt (which Unity has now acquired, and it's now just called Visual Scripting in Unity) before I finally forced myself to learn C#. I'm so glad I did...</p><p>Anyways, I've always learned new stuff through experimentation and "finding out stuff the hard way" (trying to do something the wrong way, even if it's more intuitive to me, then begrudgingly learning how to do it the proper way, which I then learn is much cleaner and more efficient - for example, when I was making <a href="https://lezzlebit.itch.io/delayed-trickshot">Delayed Trickshot</a>, most of the logic for the entire game was handled in a single gameobject in a single script. Lol)</p><p>I still do think experimentation is the most fun way of learning how to make games, as long as you set your expectations pretty low and surprise yourself with what you can learn to make! But I don't know, I'm still learning a lot about how to code. You should definitely also follow tutorials, there's lots of good stuff on Youtube. I know that isn't a very specific recommendation, but it all really depends on what you actually want to make, even just within game development.</p><p class="date">March 06, 2026</p></div>
 
@@ -51,6 +52,8 @@
 <i class="question" style="display:none" hash="-571824354"></i>
 
 
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -59,8 +62,13 @@
 
 <style>
 
+.boxes {
+  flex-direction: row-reverse;
+}
+
 .box {
-  background-color: transparent;
+  max-width: 700px;
+  align-self:baseline;
 }
 
 canvas {
@@ -89,11 +97,6 @@ canvas {
   margin: 1px;
 }
 
-hr {
-  width: 50%;
-  color: #f2d5da;
-  margin-top: 4em;
-}
 
 textarea {
   width: 200px;
@@ -104,26 +107,27 @@ textarea {
 .entries {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .link {
   border: none;
+  font-family: serif;
 }
 
 .input {
-  font-family: sans-serif;
+  font-family: serif;
   font-size: 15px;
-  background-color: #f2d5da;
-  color: rgb(28, 27, 104);
+  background: #131629;
   padding: 12px;
+  color: white;
   border: none;
   margin: 3px;
 }
 
 .input:focus {
-  outline: 2px solid rgb(28, 27, 104);
+  outline: 1px solid white
 }
 
 
@@ -136,9 +140,8 @@ textarea {
 .question {
   display: block;
   filter: opacity(1.0);
-  background-color: #f2d5da;
+  background: #131629;
   padding: 15px;
-  color: rgb(101, 79, 133);
 }
 
 @media all and (max-width:500px) {
