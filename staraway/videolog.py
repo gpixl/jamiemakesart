@@ -1,7 +1,10 @@
 from PIL import Image
-import os
 from datetime import time
+import datetime as dt
 from datetime import datetime
+import os
+import subprocess
+import math
 
 videos = os.listdir("video")
 print(videos)
@@ -31,11 +34,21 @@ for i in videos:
 
     videoobjects.append(newVideo)
     
+def get_length(input_video):
+    result = subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', input_video], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    return float(result.stdout)
 
 def sortByDate(e):
   return e.date.timestamp() * -1
 
+def pretty_timedelta(td):
+    if td.days >= 0:
+        return str(td)
+    return f'-({-td!s})'
+
 videoobjects.sort(key=sortByDate)
+
+oldtimestamp = 0
 
 for i in videoobjects:
 
@@ -69,8 +82,20 @@ for i in videoobjects:
     print(timecreated.strftime('%m/%d/%Y'))
 
 
+    timeelapsed = (oldtimestamp - i.date.timestamp())
+    if timeelapsed < 0:
+       timeelapsed = 0
+    oldtimestamp = i.date.timestamp()
 
-    links += "<div class=\"img-wrap\" onclick=\"setVideo('" + i.source + "')\"><img src=\"thumbnails/" + i.name + ".png\"><p class=\"img-text\">" + timecreated.strftime('%b %d, %Y') + "</p></div>\n"
+    length = get_length(i.source)
+
+    minsec = divmod(length, 60)
+
+
+    length = round(length*10)/10
+
+
+    links += "<div class=\"v1\" style=\"height:" + str(timeelapsed / 80000) + "px;\"></div><div class=\"img-wrap\" onclick=\"setVideo('" + i.source + "')\"><img src=\"thumbnails/" + i.name + ".png\"><p class=\"img-text\">" + timecreated.strftime('%b %d, %Y') + "<br><br>" + str(round(minsec[0])) + "m " + str(round(minsec[1])) + "s</p></div>\n"
     if firstvideo == "":
        firstvideo = i.source
 

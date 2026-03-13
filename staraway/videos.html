@@ -11,7 +11,8 @@
   <body>
     <div class="boxes">
       <div class="box">
-      <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a>
+      <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a> <a class="link" style="background: #5653ac" href="https://store.steampowered.com/app/3076330/Staraway/"><img class="icon" src="../icons/steam.png">Wishlist on Steam!</a>
+      <p>Random assorted videos of varying quality (will contain unfinished features)</p>
       <p>
         These videos won't spoil any story info, but if you want to play the game blind, don't watch these
       </p>
@@ -27,13 +28,14 @@
       </div>
 
       <div class="box">
-<div class="img-wrap" onclick="setVideo('video/Feb-24-2026.mp4')"><img src="thumbnails/Feb-24-2026.png"><p class="img-text">Feb 24, 2026</p></div>
-<div class="img-wrap" onclick="setVideo('video/Nov-11-2025.mp4')"><img src="thumbnails/Nov-11-2025.png"><p class="img-text">Nov 11, 2025</p></div>
-<div class="img-wrap" onclick="setVideo('video/Oct-31-2025.mp4')"><img src="thumbnails/Oct-31-2025.png"><p class="img-text">Oct 31, 2025</p></div>
-<div class="img-wrap" onclick="setVideo('video/Jun-14-2025.mp4')"><img src="thumbnails/Jun-14-2025.png"><p class="img-text">Jun 14, 2025</p></div>
-<div class="img-wrap" onclick="setVideo('video/Jun-13-2025.mp4')"><img src="thumbnails/Jun-13-2025.png"><p class="img-text">Jun 13, 2025</p></div>
-<div class="img-wrap" onclick="setVideo('video/Apr-17-2025.mp4')"><img src="thumbnails/Apr-17-2025.png"><p class="img-text">Apr 17, 2025</p></div>
-<div class="img-wrap" onclick="setVideo('video/Jul-18-2024.mp4')"><img src="thumbnails/Jul-18-2024.png"><p class="img-text">Jul 18, 2024</p></div>
+<div class="v1" style="height:0.0px;"></div><div class="img-wrap" onclick="setVideo('video/Feb-24-2026.mp4')"><img src="thumbnails/Feb-24-2026.png"><p class="img-text">Feb 24, 2026<br><br>0m 34s</p></div>
+<div class="v1" style="height:113.4px;"></div><div class="img-wrap" onclick="setVideo('video/Nov-11-2025.mp4')"><img src="thumbnails/Nov-11-2025.png"><p class="img-text">Nov 11, 2025<br><br>0m 37s</p></div>
+<div class="v1" style="height:11.925px;"></div><div class="img-wrap" onclick="setVideo('video/Oct-31-2025.mp4')"><img src="thumbnails/Oct-31-2025.png"><p class="img-text">Oct 31, 2025<br><br>0m 11s</p></div>
+<div class="v1" style="height:150.12px;"></div><div class="img-wrap" onclick="setVideo('video/Jun-14-2025.mp4')"><img src="thumbnails/Jun-14-2025.png"><p class="img-text">Jun 14, 2025<br><br>0m 31s</p></div>
+<div class="v1" style="height:1.08px;"></div><div class="img-wrap" onclick="setVideo('video/Jun-13-2025.mp4')"><img src="thumbnails/Jun-13-2025.png"><p class="img-text">Jun 13, 2025<br><br>0m 18s</p></div>
+<div class="v1" style="height:61.56px;"></div><div class="img-wrap" onclick="setVideo('video/Apr-17-2025.mp4')"><img src="thumbnails/Apr-17-2025.png"><p class="img-text">Apr 17, 2025<br><br>0m 11s</p></div>
+<div class="v1" style="height:1.08px;"></div><div class="img-wrap" onclick="setVideo('video/Apr-16-2025.mp4')"><img src="thumbnails/Apr-16-2025.png"><p class="img-text">Apr 16, 2025<br><br>0m 6s</p></div>
+<div class="v1" style="height:293.76px;"></div><div class="img-wrap" onclick="setVideo('video/Jul-18-2024.mp4')"><img src="thumbnails/Jul-18-2024.png"><p class="img-text">Jul 18, 2024<br><br>0m 19s</p></div>
 
       </div>
     </div>
@@ -54,6 +56,7 @@
 
     source.setAttribute('src', newVideo);
     video.load();
+    window.scrollTo(0, 0);
   }
 
 </script>
@@ -63,6 +66,11 @@
 
     .boxes {
       flex-direction: row-reverse;
+    }
+
+    .v1 {
+      width: 1px;
+      border-left: 1px dashed white;
     }
 
     .img-wrap {

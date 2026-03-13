@@ -11,7 +11,8 @@
   <body>
     <div class="boxes">
       <div class="box">
-      <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a>
+      <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a> <a class="link" style="background: #5653ac" href="https://store.steampowered.com/app/3076330/Staraway/"><img class="icon" src="../icons/steam.png">Wishlist on Steam!</a>
+      <p>Random assorted videos of varying quality (will contain unfinished features)</p>
       <p>
         These videos won't spoil any story info, but if you want to play the game blind, don't watch these
       </p>
@@ -47,6 +48,7 @@
 
     source.setAttribute('src', newVideo);
     video.load();
+    window.scrollTo(0, 0);
   }
 
 </script>
@@ -56,6 +58,11 @@
 
     .boxes {
       flex-direction: row-reverse;
+    }
+
+    .v1 {
+      width: 1px;
+      border-left: 1px dashed white;
     }
 
     .img-wrap {
