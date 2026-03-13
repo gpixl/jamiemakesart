@@ -49,12 +49,14 @@ for i in images:
         else:
             resize = og.crop((0,uppercrop*-1,og.width, og.width-uppercrop))
         resize = resize.resize((512, 512))
-        resize = resize.convert("RGBA")
+        resize = resize.convert("RGB")
         resize = resize.resize((128, 128))
 
 
-        thumbnail = Image.new("RGBA", (128,128))
+        thumbnail = Image.new("RGB", (128,128))
         thumbnail.paste(resize, (0,0))
+
+        thumbnail = thumbnail.convert("P")
         if not os.path.exists("assets/thumbnails"):
             os.mkdir("assets/thumbnails")
         i = i.replace(".jpg", ".png").replace(".gif", ".png")
