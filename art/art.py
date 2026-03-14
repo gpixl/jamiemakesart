@@ -1,6 +1,7 @@
 import PIL
 from PIL import Image, ImagePalette
 import os
+from datetime import datetime
 
 
 images = os.listdir("assets/")
@@ -16,10 +17,13 @@ for i in allworks:
         if len(worktags[0]) > 1:
             readimg = Image.open("assets/" + worktags[0])
             dimensions = str(readimg.width) + 'x' + str(readimg.height)
-            htmlstring = '<div class="image-wrap"><img id="' + worktags[0].split('.')[0] + '" \nlink="' + worktags[1] + '"\ndisplay="assets/' + worktags[0] + '"\nalt="' + worktags[2] + '"\ndimensions="' + dimensions + '"\ndate="' + worktags[3] + '">\n<p class="image-text">' + worktags[2] + '<br><br>(Click to view)</p></div>'
-            allhtml = allhtml + htmlstring
+            
 
-site = open("index copy.html").read()
+            postedDate = datetime.strptime(worktags[3], "%B %Y")
+            htmlstring = '<div class="image-wrap"><img id="' + worktags[0].split('.')[0] + '" \nlink="' + worktags[1] + '"\ndisplay="assets/' + worktags[0] + '"\nalt="' + worktags[2] + '"\ndimensions="' + dimensions + '"\ndate="' + worktags[3] + '">\n<p class="image-text">' + worktags[2] + '<br><br>' + postedDate.strftime("%b %Y") + '<br></p></div>'
+            allhtml = htmlstring + allhtml
+
+site = open("template.html").read()
 sections = site.split("<!-- IMAGES -->")
 
 newsite = sections[0] + "<!-- IMAGES -->\n" + allhtml + "<!-- IMAGES -->\n" + sections[2]

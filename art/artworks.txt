@@ -133,6 +133,11 @@ https://bsky.app/profile/jamiemakes.art/post/3maoubjug3c2e
 Drawing of my sona Apple Bird
 December 2025
 
+;;lilactime.gif
+https://bsky.app/profile/jamiemakes.art/post/3marsis4onc2c
+Drawing of CrayonSquadLilac's sona
+December 2025
+
 ;;fredwet.gif
 https://bsky.app/profile/jamiemakes.art/post/3mb5hyhqpdk2f
 Fred from Staraway (but wet)
@@ -191,7 +196,7 @@ February 2026
 ;;wobblyroo.gif
 https://bsky.app/profile/jamiemakes.art/post/3mfhsm6q6bc2e
 Drawing of a Kangaroo from Staraway
-Februrary 2026
+February 2026
 
 ;;autoScribbly.gif
 https://bsky.app/profile/jamiemakes.art/post/3mfi53yq3n22g
@@ -201,4 +206,9 @@ February 2026
 ;;birdbird.gif
 https://bsky.app/profile/jamiemakes.art/post/3mgy3v2tmx22b
 Drawing of my sona Apple Bird
+March 2026
+
+;;choriemusic.png
+ 
+Drawing of Chorie from Staraway
 March 2026
