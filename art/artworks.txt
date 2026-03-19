@@ -1,3 +1,35 @@
+
+
+;;snake.png
+https://bsky.app/profile/jamiemakes.art/post/3levdxp7gfk2m
+Fred from Staraway
+January 2025
+
+;;differentstrokesow.png
+https://bsky.app/profile/jamiemakes.art/post/3ln7efs6hi22u
+Limited palette Outer Wilds painting in Different Strokes
+April 2025
+
+;;lilacthing.png
+https://bsky.app/profile/jamiemakes.art/post/3lnemkt5pus2b
+Drawing of CrayonSquadLilac's character
+April 2025
+
+;;starawaychars.jpg
+https://bsky.app/profile/jamiemakes.art/post/3lr7vqgqkms25
+Characters from Staraway
+June 2025
+
+;;ClefPride.png
+https://bsky.app/profile/jamiemakes.art/post/3lqqwbotykk2b
+Clef from Staraway
+June 2025
+
+;;yaki.gif
+https://bsky.app/profile/jamiemakes.art/post/3lsuwsid5lc2u
+Drawing of YakiYuki's sona
+July 2025
+
 ;;HarleyArtFight.gif
 https://artfight.net/attack/8797720.looking-across-the-river
 Artfight attack on Pidginplace's character Harley
@@ -38,6 +70,11 @@ https://artfight.net/character/3003264.olive
 Artfight attack on YakiYuki's character Olive
 July 2025
 
+;;burd2.jpg
+https://bsky.app/profile/jamiemakes.art/post/3lxizfbv7gc2h
+Drawing of my sona Apple Bird
+August 2025
+
 ;;chickory.png
 https://bsky.app/profile/jamiemakes.art/post/3lz33hso46c2r
 Chicory from the game Chicory: A Colorful Tale
@@ -48,45 +85,15 @@ https://bsky.app/profile/jamiemakes.art/post/3lzdgofu3zk2x
 Fanart of the show 'The Owl House'
 September 2025
 
-;;differentstrokesow.png
-https://bsky.app/profile/jamiemakes.art/post/3ln7efs6hi22u
-Limited palette Outer Wilds painting in Different Strokes
-April 2025
-
-;;lilacthing.png
-https://bsky.app/profile/jamiemakes.art/post/3lnemkt5pus2b
-Drawing of CrayonSquadLilac's character
-April 2025
-
-;;yaki.gif
-https://bsky.app/profile/jamiemakes.art/post/3lsuwsid5lc2u
-Drawing of YakiYuki's sona
-July 2025
-
-;;ClefPride.png
-https://bsky.app/profile/jamiemakes.art/post/3lqqwbotykk2b
-Clef from Staraway
-June 2025
-
-;;snake.png
-https://bsky.app/profile/jamiemakes.art/post/3levdxp7gfk2m
-Fred from Staraway
-January 2025
-
 ;;burd.jpg
 https://bsky.app/profile/jamiemakes.art/post/3lzpixbmed22o
 Drawing of my sona Apple Bird
 September 2025
 
-;;burd2.jpg
-https://bsky.app/profile/jamiemakes.art/post/3lxizfbv7gc2h
-Drawing of my sona Apple Bird
-August 2025
-
-;;starawaychars.jpg
-https://bsky.app/profile/jamiemakes.art/post/3lr7vqgqkms25
-Characters from Staraway
-June 2025
+;;gizmo.jpg
+https://bsky.app/profile/jamiemakes.art/post/3lzd6ujl5ls2h
+My character Gizmo
+September 2025
 
 ;;kangaroo.gif
 https://bsky.app/profile/jamiemakes.art/post/3m4wpjl6res2k
@@ -102,11 +109,6 @@ November 2025
 https://bsky.app/profile/jamiemakes.art/post/3m4p3lsohic2r
 Clef from Staraway
 November 2025
-
-;;gizmo.jpg
-https://bsky.app/profile/jamiemakes.art/post/3lzd6ujl5ls2h
-My character Gizmo
-September 2025
 
 ;;applebirdthing.gif
 https://bsky.app/profile/jamiemakes.art/post/3m6id4ewgds2r
@@ -209,6 +211,11 @@ Drawing of my sona Apple Bird
 March 2026
 
 ;;choriemusic.png
- 
+https://bsky.app/profile/jamiemakes.art/post/3mh6mtuk7ts2e
 Drawing of Chorie from Staraway
+March 2026
+
+;;belle1.gif
+https://bsky.app/profile/jamiemakes.art/post/3mhf5rd76r22o
+Drawing of a banana slug from Staraway
 March 2026
