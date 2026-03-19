@@ -22,7 +22,7 @@
 
     <div class="boxes">
       <div class="box" style="max-width: fit-content; align-self:baseline;">
-        <video id="video" height="512" controls>
+        <video id="video" controls>
 <!-- SOURCE GOES HERE -->
         </video>
       </div>
@@ -55,6 +55,20 @@
 
 
 <style>
+
+    @media all and (max-width:530px) {
+      video {
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    @media all and (min-width:531px) {
+      video {
+        width: auto;
+        height: 512px;
+      }
+    }
 
     .boxes {
       flex-direction: row-reverse;
