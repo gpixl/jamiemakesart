@@ -1,0 +1,35 @@
+<input type="text" id="cipher">
+<input type="submit" onclick="cipher(1)">
+
+
+
+<script>
+
+
+    var randomizer = "385596557190713424144923271483896527685017223517686669396768909145894035716130278373386969814813063774370957962469130607387597164492493341760266143225812297835197845859176079031239165011310224875577363216904240751831551282"
+
+
+    // var randomlog = ""
+    // for(var i=0; i<45; i++) {
+    //     randomlog += Math.round(Math.random() * 100000);
+    // }
+    // console.log(randomlog);
+
+    function cipher(num) {
+        value = document.getElementById("cipher").value;
+
+        var newStr = "";
+        for (var i=0; i<value.length; i++) {
+            var letter=value[i];
+            if (letter.match(/[a-z]/i)) {
+            newStr+=String.fromCharCode(value.charCodeAt(i)+(parseInt(Math.round(randomizer[i]-5))*num));
+            }
+            else {
+                newStr+=value[i];
+            }
+        }
+        newStr = newStr.split("").reverse().join("");
+        document.getElementById("cipher").value = newStr;
+    }
+
+</script>
