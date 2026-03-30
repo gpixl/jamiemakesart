@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="../style.css?v=8" />
     <script src="../script.js?v=5" defer></script>
   </head>
-  <body style="background-image: url('grid.png');">
+  <body>
     
 
     <div class="boxes">
-      <div class="cbox">
+      <div class="box" style="align-self:baseline;">
       <a href="/" class="link"><img class="icon" src="../icons/home.png">Home</a>
       <h1>Projects I helped make</h1>
       <a class="link" onclick="Select('gamejam')" style="outline: 4px double white;"><img class="icon" src="../icons/projects.png">Game Jams</a>
       <a class="link" onclick="Select('outerwilds')"><img class="icon" src="../icons/outerwilds.png">Outer Wilds Mods</a>
       </div>
 
-    </div>
-
+    <div class="box">
     <div class="hiddendiv" id="gamejam" style="display:block">
       <div class="boxes">
         <div class="box">
@@ -103,8 +102,9 @@
       </div>
     </div>
       
-
     </div>
+    </div>
+  </div>
   </body>
 </html>
 
