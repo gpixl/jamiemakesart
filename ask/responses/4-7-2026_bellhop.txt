@@ -1,6 +1,6 @@
 <i class="question" hash="-1176862409" date="1775588173502"><b>BellHop asked:</b><br>I'm pretty sure you've mentioned it before on bluesky, but how do you go about making your art wiggly in krita?</i>
 
-Ooh ok yay I get to explain this again... 
+Ooh ok yay I get to explain this again teehee
 I should give a warning that the way I do it is convoluted and tricky. Someone could probably write a shader and make a better version (I considered exporting my lineart to blender or unity and doing shaders there, but having it all in Krita is more convenient for me)
 <br>
 So, Krita has a type of filter layer called "random pick" that just applies some noise to the pixels (it moves each pixel in a random direction). This technically makes it wiggly, but it's completely static...
@@ -16,4 +16,4 @@ Ok now for the cool part... You can animate the lineart moving under the filter,
 I'm using the Animation Curves feature for this. I use a transform mask on the lineart for the noise shifting, and a transform mask on the whole group for the cancellation.</p>
 To stylize it, I apply a blur filter to the whole thing and a layer to clip the alpha to make it extra crunchy. I also only use 2 frames of animation instead of 24 like in the second gif.
 <img class="small" src="assets/4-7-2026-bellhop/filters.gif">
-That's about it!! I only had to make this once and then I just turned it into a template so I could keep using it for all my wiggly drawings. I don't know if I wanna give this template out, but it would be cool to see other people using this technique in their own way! (I wouldn't be surprised if I'm not the first one to do this!)
+That's about it!! I only had to make this once and then I just turned it into a template so I could keep using it for all my wiggly drawings. I don't know if I wanna give this template out, but it would be cool to see other people using this technique! (I wouldn't be surprised if I'm not the first one to do this!)
