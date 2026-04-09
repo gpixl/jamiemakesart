@@ -82,6 +82,8 @@ canvas {
 
 img {
   padding: 5px;
+  max-width: 80%;
+  height: auto;
 }
 
 .icon {
@@ -90,8 +92,17 @@ img {
 }
 
 .askquestion .small {
-  height: 128px;
+  max-height: 128px;
+  max-width: none;
   margin: 1px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 
@@ -142,6 +153,19 @@ textarea {
 }
 
 @media all and (max-width:500px) {
+
+  .askquestion .small {
+    max-width: 80%;
+    max-height: 128px;
+  }
+
+  .right {
+    float: none;
+  }
+  .left {
+    float: none;
+  }
+
   body {
     margin: 0px;
   }
