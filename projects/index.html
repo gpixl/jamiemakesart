@@ -32,7 +32,7 @@
 
     <div class="boxes">
 
-    <div class="boxes" style="max-width: 1000px;">
+    <div class="boxes container">
 
         <div class="box l" id="commotion-conductor">
           <h1>Commotion Conductor</h1>
@@ -202,6 +202,10 @@
 
 
 
+  .container {
+    max-width: 1000px;
+  }
+
   .box:target {
     background-color: rgba(255, 255, 255, 0.25)
   }
@@ -298,8 +302,60 @@
 
   @media all and (max-width:500px) {
 
+    .l .sidebar-info p {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .r .sidebar-info p {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+
+    .sidebar {
+      width: 100%;
+      padding-top: 1em;
+    }
+
+    .sidebar-info {
+      width: 100%;
+    }
+
+    .sidebar-info p {
+      width: 100%;
+      text-align: left;
+    }
+
+    .credit i {
+      text-align: left;
+      display: block;
+      padding-top: 5px;
+    }
+
+
+    .container {
+      max-width: 100%;
+    }
+
+    .box {
+      padding: 25px;
+      margin: 0px;
+      max-width: 100%;
+    }
+
+    .credit:hover {
+      background-color: transparent;
+    }
+
+    .picture {
+      padding: 0px;
+      max-width: 100%;
+    }
+
     .box .banner {
-      width: auto;
+      max-width: 100%;
+      height: auto;
     }
 
 
