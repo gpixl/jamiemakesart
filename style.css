@@ -34,8 +34,15 @@ a {
   color: white;
 }
 
+a:hover {
+  color: rgba(255, 255, 255, 0.75)
+}
+
+.link:hover {
+  color: white
+}
+
 h1 {
-  filter: contrast(5000%);
   font-family: 'header';
   font-size: 180%;
   font-synthesis-weight: none;
