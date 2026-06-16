@@ -225,16 +225,6 @@ https://bsky.app/profile/jamiemakes.art/post/3mi5lensle222
 Drawing of Kalimba from Staraway
 March 2026
 
-;;birdbirdgirlgirl.gif
-https://bsky.app/profile/jamiemakes.art/post/3mia7xrzzvk25
-Drawing of my sona Apple Bird with a photo background
-March 2026
-
-;;appleslices.gif
-https://bsky.app/profile/jamiemakes.art/post/3mil5zb4kik2q
-Drawing of my sona Apple Bird with a 3D background
-April 2026
-
 ;;sadbuddy.png
 https://bsky.app/profile/jamiemakes.art/post/3mj3avkus2s2f
 Drawing of Staraway's protagonist
@@ -244,3 +234,8 @@ April 2026
 https://bsky.app/profile/jamiemakes.art/post/3mjdxqrwa6s2x
 Drawing of Fred in front of some cratered planets
 April 2026
+
+;;birdclouds.png
+https://bsky.app/profile/jamiemakes.art/post/3moejfvrtck2y
+Drawing of my sona Apple Bird
+May 2026
