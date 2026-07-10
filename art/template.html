@@ -84,10 +84,23 @@
     image-rendering: auto;
   }
 
+  .box {
+	align-self:baseline;
+	max-width: 550px;
+	padding: 0px;
+  }
+
+  .reverse {
+	flex-direction: row-reverse
+  }
+
   
 
   @media all and (max-width:800px) {
   
+	.box {
+		width: 280px;
+	}
   body {
     padding: 0.2em;
   }
