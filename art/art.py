@@ -19,6 +19,7 @@ class artwork:
 	link=""
 	description=""
 	group=""
+	index = 0
 
 class group:
 	name = ""
@@ -31,7 +32,9 @@ groups = []
 def timeInt(gettime):
 	return datetime.strptime(gettime, "%B %Y").timestamp()
 
+artIndex = 0
 for i in allworks:
+	artIndex += 1
 	worktags = i.split("\n")
 	if len(worktags) > 1:
 		if len(worktags[0]) > 1:
@@ -64,6 +67,8 @@ for i in allworks:
 				newGroup.lastdateadded = worktags[3]
 				groups.append(newGroup)
 
+			newArtwork.index = artIndex
+
 			newArtwork.link = worktags[1]
 			newArtwork.description = worktags[2]
 			newArtwork.date = worktags[3]
@@ -91,7 +96,7 @@ def sortByGroup(e):
   return -timeInt(getGroup(e).lastdateadded)
 
 def sortByTime(e):
-  return -timeInt(e.date)
+  return -timeInt(e.date) + -e.index
 
 artworks = sorted(artworks, key=lambda x:(sortByGroup(x), sortByTime(x)))
 
