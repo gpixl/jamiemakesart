@@ -40,76 +40,87 @@
 <script src="script.js?v=5"></script> 
 
 <style>
-
-
-  .date {
-    font-size: 70%;
-    opacity: 80%;
-  }
-
-  .image-wrap {
-    display: inline-block;
-    position: relative;
-    width: 128px;
-    height: 128px;
-    margin: 3px;
-    border-radius: 1px;
-  }
-
-  .image-wrap:hover > img {
-    filter:opacity(30%);
-    cursor: pointer;
-  }
-
-  .image-wrap:hover > .image-text {
-    display: block;
-  }
-
-  .image-text {
-    text-align: center;
-    pointer-events: none;
-    display: none;
-    position: absolute;
-    top: 0px;
-    font-size: 80%;
-    width: 128px;
-    height: 128px;
-  }
-
-  body {
-    padding: 4em;
-  }
-
-  .icon {
-    image-rendering: auto;
-  }
-
-  .box {
-	align-self:baseline;
-	max-width: 550px;
-	padding: 0px;
-  }
-
-  .reverse {
-	flex-direction: row-reverse
-  }
-
-  
-
-  @media all and (max-width:800px) {
-  
-	.box {
-		width: 280px;
+	.date {
+		font-size: 70%;
+		opacity: 80%;
 	}
-  body {
-    padding: 0.2em;
-  }
 
-  .img {
-  margin-left: 0px;
-  width: auto;
-  height: auto;
-  }
-  }
+	.image-wrap {
+		display: inline-block;
+		position: relative;
+		width: 128px;
+		height: 128px;
+		margin: 3px;
+		border-radius: 1px;
+	}
 
+	.image-wrap:hover>img {
+		filter: opacity(30%);
+		cursor: pointer;
+	}
+
+	.image-wrap:hover>.image-text {
+		display: block;
+	}
+
+	.image-text {
+		text-align: center;
+		pointer-events: none;
+		display: none;
+		position: absolute;
+		top: 0px;
+		font-size: 80%;
+		width: 128px;
+		height: 128px;
+	}
+
+	body {
+		padding: 4em;
+	}
+
+	.icon {
+		image-rendering: auto;
+	}
+
+	.box {
+		align-self: baseline;
+		max-width: 550px;
+		padding: 0px;
+	}
+
+	.reverse {
+		flex-direction: row-reverse
+	}
+
+
+
+	@media all and (max-width:800px) {
+
+		.box {
+			width: 280px;
+		}
+
+		body {
+			padding: 0.2em;
+		}
+
+		.image-wrap>img {
+			display: block;
+			width: 72px;
+			height: 72px;
+		}
+		.image-wrap {
+			width: 72px;
+			height: 72px;
+		}
+		.image-text {
+			font-size: 0px;
+		}
+
+		.img {
+			margin-left: 0px;
+			width: auto;
+			height: auto;
+		}
+	}
 </style>
