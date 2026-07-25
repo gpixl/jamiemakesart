@@ -6,6 +6,11 @@
   src: url('assets/Gibberesque.ttf');
 }
 
+
+.center {
+	text-align: center;
+}
+
 .input {
   font-family: serif;
   font-size: 15px;

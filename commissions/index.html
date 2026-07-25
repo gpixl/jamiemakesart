@@ -13,14 +13,15 @@
 <body style="background-color: #3f52a8;">
 	<div class="boxes">
 		<div class="box">
-			<h3>Commissions</h3>
+			<h3 class="center">Commissions Page</h3>
 			<h2>Hey!! Please read everything on this page before you commission me. Thanks!</h2>
 			<ul>
 				<li><b>I do not do commissions for minors.</b> Sorry!</li>
-				<li>I draw quickest and best if I get commissioned to draw something that I like drawing! So I think
-					it's useful if I tell you <a href="what-i-like-drawing.html"><b>what I like drawing.</b></a><br>(that is a link you can click on)</li>
+				<li>I draw quickest and best if I get commissioned to draw something that I like drawing! So I think it's useful if I show and tell you what I like to draw. (linked below)</li>
+				<li>Also see the page linked below if you're wondering about NSFW art.</li>
 			</ul>
-			<p>(Shown below are drawings I've done for people, and the sorts of things I enjoy drawing)</p>
+			<a href="what-i-like-drawing.html" class="link">Details on things I like to draw</a>
+			<p>(Shown below are drawings that I enjoyed doing)</p>
 		</div>
 	</div>
 	<div class="boxes">
@@ -33,6 +34,11 @@
 		<img class="showcase" src="../art/assets/funnifred.gif">
 	</div>
 	<hr>
+	<div class="boxes">
+		<div class=box>
+			<p>Here are my commission options:</p>
+		</div>
+	</div>
 	<div class="boxes">
 		<div class="box option">
 			<h3>'Flexible' Drawing</h3>
@@ -50,20 +56,113 @@
 			<p>It helps a LOT if you have some basic visual examples or direction beyond text!! I don't expect you to be an artist to do this. The most simple, crappy microsoft paint drawing can communicate a lot that I might misinterpret in text.</p>
 			<p>This option is ideal if you want me to make a refsheet for you (and you want it to look a specific way).</p>
 			<ul>
-				<li>'Flexible' Headshot/PFP, or very simple shaped character: <b>$50 USD</b></li>
-				<li>'Flexible' Full Body character: <b>$80 USD</b></li>
+				<li>'Rigid' Headshot/PFP, or very simple shaped character: <b>$50 USD</b></li>
+				<li>'Rigid' Full Body character: <b>$100 USD</b></li>
 			</ul>
+		</div>
+	</div>
+	<div class="boxes">
+		<div class="box" style="min-height: 500px; max-width: 600px;">
+			<p>Additional characters, beyond the main one, will cost half the price extra. (Flexible drawing with 2 full-body characters is $60 + 30 (half of 60), so $90).</p>
+			<p>Here's a calculator if I explained that in a confusing way.</p>
+			<p>
+				<input type="radio" class="radio" id="flexible" name="drawingtype" value="flexible" onChange="calculatePrice()" checked>
+				<label for="flexible">Flexible</label><br>
+				<input type="radio" class="radio" id="rigid" name="drawingtype" value="rigid" onChange="calculatePrice()">
+				<label for="rigid">Rigid</label><br>
+			</p>
+
+			<p>
+				<input class="picker" type="number" value="1" id="fullbody" name="quantity" min="0" max="5"  onChange="calculatePrice()"> full-body characters<br>
+				<input class="picker" type="number" value="0" id="headshot" name="quantity" min="0" max="5" onChange="calculatePrice()"> mostly obstructed characters
+			</p>
+
+			<h3 id="finalresult"></h3>
+			<p id="finaltext"></p>
+			
+			
 		</div>
 	</div>
 </body>
 
 </html>
 
+<script>
+
+	calculatePrice()
+
+	function priceloop(drawingtypeprice, drawingsizecount) {
+		price = 0;
+		for (i = 0; i < drawingsizecount; i++) {
+			price += drawingtypeprice * pricemultiplier;
+			pricemultiplier = 0.5;
+		}
+		return price;
+	}
+
+	function calculatePrice() {
+
+		radiovalue = document.querySelector('input[name="drawingtype"]:checked')
+
+		console.log(radiovalue.value)
+
+		fullbody = document.getElementById("fullbody").value
+		headshot = document.getElementById("headshot").value
+
+
+		drawingtypeprice = 60
+		if (radiovalue.value == "flexible") drawingtypeprice = 60
+		if (radiovalue.value == "rigid") drawingtypeprice = 100
+
+		pricemultiplier = 1;
+		price = priceloop(drawingtypeprice, fullbody);
+		price += priceloop(drawingtypeprice / 2, headshot)
+
+
+		fullbodyprinted = ""
+		if (fullbody == 1) fullbodyprinted = fullbody + " fullbody character"
+		if (fullbody > 1) fullbodyprinted = fullbody + " fullbody characters"
+		if (headshot > 0 && fullbody > 0) fullbodyprinted += " and "
+
+		headshotprinted = ""
+		if (headshot == 1) headshotprinted = headshot + " partial character"
+		if (headshot > 1) headshotprinted = headshot + " partial characters"
+
+		printed = "For a " + titleCase(radiovalue.value) + " drawing with " + fullbodyprinted + headshotprinted
+		priceprinted = "$" + price + " USD"
+		if (headshot == 0 && fullbody == 0) {
+			printed = ""
+			priceprinted = ""
+		}
+
+		document.getElementById("finaltext").innerHTML = printed;
+		document.getElementById("finalresult").innerHTML = priceprinted;
+	}
+
+	// https://stackoverflow.com/questions/32589197/how-can-i-capitalize-the-first-letter-of-each-word-in-a-string-using-javascript
+	function titleCase(str) {
+		var splitStr = str.toLowerCase().split(' ');
+		for (var i = 0; i < splitStr.length; i++) {
+			splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+		}
+		return splitStr.join(' '); 
+	}
+
+</script>
+
 
 <style>
 
+	.picker {
+		color: blue;
+		border: none;
+		outline: none;
+		padding: 5px;
+		margin: 2px;
+	}
+
 	.option {
-		background-color: black;
+		background-color: #3d3983;
 	}
 	.showcase {
 		height: 300px;
