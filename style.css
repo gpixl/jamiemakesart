@@ -6,6 +6,19 @@
   src: url('assets/Gibberesque.ttf');
 }
 
+.input {
+  font-family: serif;
+  font-size: 15px;
+  background: #131629;
+  padding: 12px;
+  color: white;
+  border: none;
+  margin: 3px;
+}
+
+.input:focus {
+  outline: 1px solid white
+}
 
 hr {
 	border: 1px solid rgba(255, 255, 255, 0.5);
@@ -155,7 +168,8 @@ h1 {
 
 .link {
   
-
+  font-family: serif;
+  border:none;
   background-color: #3d3983;
   font-style: italic;
   border-radius: 17px;
