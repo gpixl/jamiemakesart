@@ -1,5 +1,5 @@
 
-template = open("template.html").read().split("//")
+template = open("template.html").read().split("***")
 
 built = ""
 for i in template:
