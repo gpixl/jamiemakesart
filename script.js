@@ -1,4 +1,5 @@
 
+
 icons = document.getElementsByClassName("icon");
 for(i = 0; i < icons.length; i++) {
   icons[i].alt = " "

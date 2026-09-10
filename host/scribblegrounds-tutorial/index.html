@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="assets/favicon.png" />
+	<title>How to make a custom map</title>
+	<link rel="stylesheet" href="../../style.css?v=12" />
+</head>
+<body>
+	<h2>
+		How to make a custom map for Scribble Grounds
+	</h2>
+	<!-- <p>Custom maps are GLB files sent from the server to the client when they join. GLB files can contain model and texture information. You can export such a file from Blender.</p>
+	<p>Your custom map can look however you want, but you should have a pretty good understanding of UV mapping.</p>
+	<p>The map of Scribble Grounds is split up into many objects, each of which has a texture that can be drawn on. A drawable object can be something like a section of a wall, or a bunch of cubes next to each other - but it cannot have overlapping UVs, or else player's drawings will be duplicated across the object. The UVs also must cover enough of the texture to have a satisfying amount of space to draw on (UV faces covering small amounts of the texture will have larger pixels).</p>
+	<p>How you actually map the UVs for each object are up to you, but there are some rules that must be followed for an object to work properly.</p>
+	<ul>
+		<li>There must be two UV maps per object. The first one is used to map the drawable texture, and the second one is used for the lightmap (or whatever decorative texture you decide to put on the object). This allows you to use one lightmap texture for multiple objects, while letting each object use as much UV space as possible for the drawable UV map.</li>
+		<li>Each drawable object must be a seperate object with its transforms applied. This means that the position of the object in blender is 0, 0, 0, rotation is 0, 0, 0, and scale is 1, 1, 1. (If you apply an object's transforms in blender, it remains in the same visual position while having its position set to the center)</li>
+	</ul>
+	</ul> -->
+	<p>Custom maps are GLB files sent from the server to the client when they join. A map is made of a bunch of objects, and each drawable object, when loaded in the game, has a 1024x1024 texture that can be drawn on by players.</p>
+	<p>It's recommended to make a map in blender and export it as a GLB file that way.</p>
+	<p>Each <b>drawable object</b> MUST:</p>
+	<ul>
+		<li>
+			Be a separate object in blender with its transforms applied (position at 0, 0, 0, no rotation, scale 1, etc).
+		</li>
+		<li>
+			Have two UV maps - the first one for the drawing texture, and the second one for the baked lightmap or texture details, in that order (this allows you to use one lightmap texture for multiple objects)<br>
+			(The drawing texture UV map must not overlap itself, otherwise people's drawings will be duplicated elsewhere on the object)
+		</li>
+	</ul>
+	<p>If you want an object to not have drawing functionality, simply make its position in the world be something other than 0, 0, 0.</p>
+	<p>Correctly defined drawable objects automatically get colliders when imported, but non-drawable objects do not. To add a collider to a non-drawable object, include the hint "-col" in its name.</p>
+</body>
+</html>
